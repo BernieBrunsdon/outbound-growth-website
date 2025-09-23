@@ -82,12 +82,12 @@ a {
 
 /* Section spacing */
 .section-padding {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 2rem 0;
+    padding: 4rem 0;
   }
 }
 
@@ -108,8 +108,29 @@ a {
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* Container spacing */
+.container-spacing {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-spacing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-spacing {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 /* GDPR Cookie Banner */

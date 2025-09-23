@@ -9,40 +9,40 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className={`space-y-8 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight">
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-ink leading-tight">
                 {siteContent.hero.headline}
               </h1>
-              <p className="text-xl text-muted leading-relaxed max-w-2xl">
+              <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-2xl">
                 {siteContent.hero.subheadline}
               </p>
             </div>
 
             {/* Feature highlights */}
-            <div className="flex flex-wrap gap-4 text-sm text-muted">
-              <span className="bg-white px-3 py-1 rounded-full border">Dashboard access</span>
-              <span className="bg-white px-3 py-1 rounded-full border">Monthly reports</span>
-              <span className="bg-white px-3 py-1 rounded-full border">Full transparency</span>
+            <div className="flex flex-wrap gap-6 text-sm text-muted">
+              <span className="bg-white px-6 py-3 rounded-full border shadow-sm font-medium">Dashboard access</span>
+              <span className="bg-white px-6 py-3 rounded-full border shadow-sm font-medium">Monthly reports</span>
+              <span className="bg-white px-6 py-3 rounded-full border shadow-sm font-medium">Full transparency</span>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6">
               <a
                 href={siteContent.hero.primary_cta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors duration-200 btn-hover"
+                className="bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg text-center hover:bg-blue-700 transition-all duration-200 btn-hover shadow-xl"
               >
                 {siteContent.hero.primary_cta.label}
               </a>
               <a
                 href={siteContent.hero.secondary_cta.href}
-                className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-center hover:bg-primary hover:text-white transition-colors duration-200 btn-hover"
+                className="border-2 border-primary text-primary px-10 py-5 rounded-xl font-bold text-lg text-center hover:bg-primary hover:text-white transition-all duration-200 btn-hover"
               >
                 {siteContent.hero.secondary_cta.label}
               </a>
