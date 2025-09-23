@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  outbound-growth:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - NEXT_PUBLIC_ADMIN_PASS=${NEXT_PUBLIC_ADMIN_PASS}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

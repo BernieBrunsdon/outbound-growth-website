@@ -1,0 +1,58 @@
+{
+  "site": {
+    "title": "Outbound-Growth — Premium Sales Outsourcing & Consulting",
+    "description": "Boutique international sales outsourcing and consulting. Managed SDR seats from South Africa for UK & US SaaS. Dashboard access, guaranteed process, measurable growth.",
+    "company": "Outbound-Growth",
+    "email": "bernie@outbound-growth.com",
+    "phone": "+27 82 555 0123",
+    "location": "Cape Town, South Africa (Remote-first)"
+  },
+  "hero": {
+    "headline": "We provide world-class SDR teams for B2B companies that need predictable client acquisition.",
+    "subheadline": "We help SaaS, cybersecurity, fintech, and other B2B companies generate qualified meetings with full visibility and control.",
+    "primary_cta": {"label": "Book a Consultation", "href": "https://calendly.com/outbound-growth/consult"},
+    "secondary_cta": {"label": "Learn More", "href": "#about"}
+  },
+  "services": [
+    {
+      "title": "Managed SDR Seat",
+      "features": ["Dedicated, fully trained SDR focused only on your pipeline","All sales software included (HubSpot, Zoho, Apollo, JustCall)","1x targeted email campaign per month (≈ 2,500 contacts)","1,400+ targeted touchpoints per month (50 calls + 15 personalized emails + 5 LinkedIn connection requests or inboxes per day)","Calendar handoff — demos booked directly into your AE's schedule"],
+      "cta": {"label":"Schedule a Strategy Call","href":"https://calendly.com/outbound-growth/consult"}
+    },
+    {
+      "title":"Simple & Seamless Management",
+      "features":["Weekly performance reports with full transparency on activity and outcomes","Dedicated Slack channel for direct communication with your SDR and manager","Seamless coverage when your SDR is away","All HR, hiring, contracts, payroll, tax, and benefits handled by Outbound-Growth"],
+      "cta":{"label":"Enquire about Consulting","href":"mailto:bernie@outbound-growth.com"}
+    },
+    {
+      "title":"The Results That Drive Growth",
+      "features":["Consistent flow of qualified demos delivered straight to your sales team","Reduced cost of acquisition compared to building and managing an in-house SDR function","Faster pipeline growth, with outbound channels running at full speed from day one","Peace of mind knowing your SDR team scales with you, without the HR or operational headaches"],
+      "cta":{"label":"Talk to an Expert","href":"mailto:bernie@outbound-growth.com"}
+    }
+  ],
+  "process": {
+    "title":"The Process",
+    "subtitle":"How we transform your sales pipeline in 5 simple steps",
+    "steps":[
+      {"title":"Consultation & Discovery","description":"30-minute consultation to explore your business and recommend the best package."},
+      {"title":"Building the Solution","description":"Handpick SDRs, define KPIs, start AI-assisted Hyperbound training."},
+      {"title":"Setup & Integration","description":"Setup HubSpot, Apollo, JustCall; provide secure dashboard access."},
+      {"title":"Communication & Alignment","description":"Slack channel and weekly check-ins to keep everyone aligned."},
+      {"title":"SDR Launch & Tracking","description":"SDR goes live; interactive dashboard and full transparency from day one."}
+    ]
+  },
+  "caseStudies": [
+    {"title":"Tech Startup Revenue Growth","results":"340% Revenue Increase | 6 months | $2.3M"},
+    {"title":"Manufacturing Company Market Expansion","results":"15 New Countries | 280% International Sales | $5.7M"},
+    {"title":"Professional Services Pipeline Optimization","results":"85% Conversion | 60% Faster Sales Cycle | $1.8M"}
+  ],
+  "testimonials":[
+    {"quote":"Outbound-Growth transformed our outbound motion. Their SDRs were trained, professional and delivered a reliable flow of qualified demos into our sales team.","author":"Client Partner","title":"VP Sales, Global SaaS","initials":"JS","color":"#0B63D6"},
+    {"quote":"Their dashboard and transparency made it easy for us to monitor progress and trust the process. We scaled from 1 to 3 SDR seats in under 3 months.","author":"Client Partner","title":"Head of Growth, Enterprise SaaS","initials":"MS","color":"#06A77D"}
+  ],
+  "integrations": [
+    "Vapi", "OpenAI", "Google Calendar", "HubSpot", "Salesforce", "Zoom", 
+    "Notion", "Zapier", "Microsoft Azure", "AWS", "Google Cloud", 
+    "Slack", "Stripe", "Twilio", "WhatsApp"
+  ]
+}
