@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import siteContent from '../../content/site.json';
 
 export default function Footer() {
@@ -35,9 +36,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">OG</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/images/logo.png"
+                  alt="Outbound-Growth Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
                 <div className="font-bold text-lg">Outbound-Growth</div>
