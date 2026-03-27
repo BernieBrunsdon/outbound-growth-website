@@ -34,7 +34,6 @@ a {
   text-decoration: none;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -52,19 +51,16 @@ a {
   background: #0a52b8;
 }
 
-/* Focus styles for accessibility */
 *:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* Button hover effects */
 .btn-hover:hover {
   transform: scale(1.03);
   transition: transform 0.2s ease-out;
 }
 
-/* Fade in animation */
 .fade-in {
   animation: fadeIn 0.35s ease-out;
 }
@@ -80,7 +76,6 @@ a {
   }
 }
 
-/* Section spacing */
 .section-padding {
   padding: 6rem 0;
 }
@@ -91,7 +86,6 @@ a {
   }
 }
 
-/* Card styles */
 .card {
   background: white;
   border-radius: var(--radius);
@@ -103,7 +97,6 @@ a {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Typography */
 .text-section-label {
   font-size: 0.875rem;
   font-weight: 600;
@@ -113,7 +106,6 @@ a {
   margin-bottom: 1rem;
 }
 
-/* Container spacing */
 .container-spacing {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -133,7 +125,6 @@ a {
   }
 }
 
-/* GDPR Cookie Banner */
 .cookie-banner {
   position: fixed;
   bottom: 0;

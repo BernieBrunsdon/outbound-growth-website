@@ -13,10 +13,9 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const serviceOptions = [
-    'Managed SDR Seat',
-    'Sales Consulting',
-    'Custom Solution',
-    'General Inquiry',
+    'Managed SDR seat (discovery)',
+    'US / UK SaaS outbound',
+    'General inquiry',
   ];
 
   const handleChange = (e) => {
@@ -55,7 +54,6 @@ export default function ContactForm() {
           bookConsultation: false,
         });
 
-        // Open Calendly if checkbox is checked
         if (formData.bookConsultation) {
           window.open('https://calendly.com/outbound-growth/consult', '_blank');
         }
@@ -84,7 +82,6 @@ export default function ContactForm() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="card p-8">
             <h3 className="text-2xl font-semibold text-ink mb-6">Get in Touch</h3>
             
@@ -198,7 +195,7 @@ export default function ContactForm() {
                   className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                 />
                 <label htmlFor="bookConsultation" className="ml-2 text-sm text-ink">
-                  Also book consultation now
+                  Open calendar to book a discovery call after send
                 </label>
               </div>
 
@@ -208,7 +205,7 @@ export default function ContactForm() {
                   disabled={isSubmitting}
                   className="flex-1 bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Sending...' : 'Book Consultation'}
+                  {isSubmitting ? 'Sending...' : 'Book a Discovery Call'}
                 </button>
                 <button
                   type="submit"
@@ -221,7 +218,6 @@ export default function ContactForm() {
             </form>
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-ink mb-6">Contact Information</h3>
@@ -283,7 +279,7 @@ export default function ContactForm() {
                 rel="noopener noreferrer"
                 className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover"
               >
-                Book Now
+Book a Discovery Call
               </a>
             </div>
           </div>

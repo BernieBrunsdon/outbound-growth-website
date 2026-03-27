@@ -1,20 +1,24 @@
 import Hero from '../components/Hero';
-import ServicesGrid from '../components/ServicesGrid';
+import SolutionSection from '../components/SolutionSection';
 import ProcessSteps from '../components/ProcessSteps';
-import IntegrationsGrid from '../components/IntegrationsGrid';
-import CaseStudies from '../components/CaseStudies';
+import WhySouthAfrica from '../components/WhySouthAfrica';
+import IdealClients from '../components/IdealClients';
+import OutcomesSection from '../components/OutcomesSection';
 import Testimonials from '../components/Testimonials';
+import FinalCtaSection from '../components/FinalCtaSection';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesGrid />
+      <SolutionSection />
       <ProcessSteps />
-      <IntegrationsGrid />
-      <CaseStudies />
+      <WhySouthAfrica />
+      <IdealClients />
+      <OutcomesSection />
       <Testimonials />
+      <FinalCtaSection />
       <ContactForm />
     </>
   );

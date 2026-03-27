@@ -2,15 +2,13 @@ import siteContent from '../../content/site.json';
 
 export default function Testimonials() {
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="testimonials" className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="text-section-label mb-4">Testimonials</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
-            What Our Clients Say
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">What clients say</h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Hear from companies that have transformed their sales with our SDR teams
+            Teams selling into the US and UK—from SaaS scale-ups to revenue leaders.
           </p>
         </div>
 
@@ -18,7 +16,7 @@ export default function Testimonials() {
           {siteContent.testimonials.map((testimonial, index) => (
             <div key={index} className="card p-8 hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-start mb-6">
-                <div 
+                <div
                   className="w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold mr-4 flex-shrink-0"
                   style={{ backgroundColor: testimonial.color }}
                 >
@@ -29,11 +27,9 @@ export default function Testimonials() {
                   <div className="text-sm text-muted">{testimonial.title}</div>
                 </div>
               </div>
-
               <blockquote className="text-lg text-ink leading-relaxed mb-6">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
-
               <div className="flex text-accent">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -45,20 +41,15 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Additional testimonial CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold text-ink mb-4">Want to Share Your Success Story?</h3>
-            <p className="text-muted mb-6">
-              We&apos;d love to feature your company&apos;s results. Contact us to discuss how we can showcase your success.
-            </p>
-            <a
-              href="mailto:bernie@outbound-growth.com"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover"
-            >
-              Share Your Story
-            </a>
-          </div>
+        <div className="mt-14 text-center">
+          <a
+            href={siteContent.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover"
+          >
+            Book a Discovery Call
+          </a>
         </div>
       </div>
     </section>

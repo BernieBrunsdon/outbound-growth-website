@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
+import { getFirebaseDb } from '../../lib/firebaseAdmin';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -28,26 +29,28 @@ export default async function handler(req, res) {
   };
 
   try {
-    // Ensure data directory exists
-    const dataDir = path.join(process.cwd(), 'data');
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
+    const db = getFirebaseDb();
+
+    if (db) {
+      await db.collection('contacts').doc(contact.id).set(contact);
+    } else {
+      // Fallback for local/dev when Firebase credentials are not configured.
+      const dataDir = path.join(process.cwd(), 'data');
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+
+      const contactsFile = path.join(dataDir, 'contacts.json');
+      let contacts = [];
+
+      if (fs.existsSync(contactsFile)) {
+        const fileContent = fs.readFileSync(contactsFile, 'utf8');
+        contacts = JSON.parse(fileContent);
+      }
+
+      contacts.push(contact);
+      fs.writeFileSync(contactsFile, JSON.stringify(contacts, null, 2));
     }
-
-    // Read existing contacts
-    const contactsFile = path.join(dataDir, 'contacts.json');
-    let contacts = [];
-    
-    if (fs.existsSync(contactsFile)) {
-      const fileContent = fs.readFileSync(contactsFile, 'utf8');
-      contacts = JSON.parse(fileContent);
-    }
-
-    // Add new contact
-    contacts.push(contact);
-
-    // Save contacts
-    fs.writeFileSync(contactsFile, JSON.stringify(contacts, null, 2));
 
     // Send email if SMTP is configured
     if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {

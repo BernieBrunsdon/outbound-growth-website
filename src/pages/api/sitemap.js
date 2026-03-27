@@ -10,7 +10,7 @@ export default function handler(req, res) {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>${baseUrl}/#about</loc>
+    <loc>${baseUrl}/#solution</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -28,7 +28,7 @@ export default function handler(req, res) {
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>${baseUrl}/#case-studies</loc>
+    <loc>${baseUrl}/#outcomes</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

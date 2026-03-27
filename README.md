@@ -110,7 +110,6 @@ All website content is stored in `content/site.json`. To update content:
 - **Process**: Step-by-step process description
 - **Case Studies**: Success stories and results
 - **Testimonials**: Client testimonials
-- **Integrations**: Supported tools and platforms
 
 ## Admin Panel
 
@@ -139,6 +138,20 @@ Default admin password is set in `NEXT_PUBLIC_ADMIN_PASS` environment variable.
 | `SMTP_PASS` | SMTP password | No |
 | `WEBHOOK_URL` | Webhook for form submissions | No |
 | `NEXT_PUBLIC_ADMIN_PASS` | Admin panel password | Yes |
+| `FIREBASE_PROJECT_ID` | Firebase project ID for Firestore | No* |
+| `FIREBASE_CLIENT_EMAIL` | Firebase service account client email | No* |
+| `FIREBASE_PRIVATE_KEY` | Firebase service account private key | No* |
+
+\* If omitted, contact submissions fall back to local `data/contacts.json` storage.
+
+### Firebase setup (optional, recommended for production)
+
+1. In Firebase Console, open your project and enable Firestore Database.
+2. Go to Project Settings -> Service accounts -> Generate new private key.
+3. Add the service account values to your deployment environment:
+   - `FIREBASE_PROJECT_ID`
+   - `FIREBASE_CLIENT_EMAIL`
+   - `FIREBASE_PRIVATE_KEY` (keep escaped `\n` line breaks in env var format)
 
 ## File Structure
 
@@ -146,7 +159,6 @@ Default admin password is set in `NEXT_PUBLIC_ADMIN_PASS` environment variable.
 outbound-growth/
 ├── public/
 │   ├── images/
-│   │   └── integrations/
 │   ├── robots.txt
 │   └── favicon.ico
 ├── src/
@@ -156,7 +168,6 @@ outbound-growth/
 │   │   ├── Hero.jsx
 │   │   ├── ServicesGrid.jsx
 │   │   ├── ProcessSteps.jsx
-│   │   ├── IntegrationsGrid.jsx
 │   │   ├── CaseStudies.jsx
 │   │   ├── Testimonials.jsx
 │   │   ├── ContactForm.jsx

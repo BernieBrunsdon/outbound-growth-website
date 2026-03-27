@@ -15,22 +15,22 @@ module.exports = {
         bg: '#FFFFFF',
       },
       borderRadius: {
-        'custom': '12px',
+        custom: '12px',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       fontWeight: {
-        'regular': '400',
-        'semibold': '600',
-        'bold': '800',
+        regular: '400',
+        semibold: '600',
+        bold: '800',
       },
       spacing: {
-        '8': '8px',
-        '16': '16px',
-        '24': '24px',
-        '32': '32px',
-        '48': '48px',
+        8: '8px',
+        16: '16px',
+        24: '24px',
+        32: '32px',
+        48: '48px',
       },
       animation: {
         'fade-in': 'fadeIn 0.35s ease-out',
@@ -49,4 +49,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
