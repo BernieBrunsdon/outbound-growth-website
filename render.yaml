@@ -1,6 +1,7 @@
 # Render Blueprint — marketing site (Next.js)
 # Apply: Dashboard → Blueprints → New Blueprint Instance → select this repo
-# After deploy: Settings → Environment → fill secrets marked sync:false, then Custom Domains
+# After deploy: Environment (secrets below), Custom Domains.
+# Optional later in Dashboard: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, WEBHOOK_URL (see env.example).
 
 services:
   - type: web
@@ -28,15 +29,4 @@ services:
       - key: FIREBASE_CLIENT_EMAIL
         sync: false
       - key: FIREBASE_PRIVATE_KEY
-        sync: false
-      # Optional — email notifications from contact form
-      - key: SMTP_HOST
-        sync: false
-      - key: SMTP_PORT
-        value: "587"
-      - key: SMTP_USER
-        sync: false
-      - key: SMTP_PASS
-        sync: false
-      - key: WEBHOOK_URL
         sync: false
