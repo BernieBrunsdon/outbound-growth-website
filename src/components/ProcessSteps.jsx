@@ -48,37 +48,6 @@ export default function ProcessSteps() {
             ))}
           </div>
         </div>
-
-        <div className={`mt-20 ${isVisible ? 'fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.8s' }}>
-          <div className="bg-gradient-to-br from-primary to-blue-700 rounded-2xl p-12 text-white shadow-2xl relative overflow-hidden border border-blue-600">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-8 right-8 w-32 h-32 border-2 border-white rounded-full" />
-              <div className="absolute bottom-8 left-8 w-20 h-20 border border-white rounded-full" />
-            </div>
-            <div className="relative z-10 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">Next step: talk to us</h3>
-              <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
-                Book a discovery call. We&apos;ll confirm fit, explain how a seat works, and answer tooling and timezone questions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href={siteContent.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-200 btn-hover shadow-lg"
-                >
-                  Book a Discovery Call
-                </a>
-                <a
-                  href={`mailto:${siteContent.site.email}`}
-                  className="inline-block border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-hover"
-                >
-                  Email us
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

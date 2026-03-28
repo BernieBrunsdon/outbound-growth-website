@@ -1,19 +1,18 @@
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
+import siteContent from '../../content/site.json';
 
 export default function Layout({ children }) {
+  const { title, description } = siteContent.site;
   return (
     <>
       <Head>
-        <title>Outbound-Growth — Outbound SDR-as-a-Service for US &amp; UK SaaS</title>
-        <meta
-          name="description"
-          content="Dedicated South African SDR teams for SaaS companies in the US and UK. Cold calling, email, LinkedIn, qualification—meetings booked on your calendar. Book a discovery call."
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta
           name="keywords"
-          content="SDR as a service, outbound SDR, SaaS lead generation, US UK SaaS, South Africa SDR, managed SDR, B2B outbound, discovery calls"
+          content="OG Pulse, outbound transparency dashboard, SDR as a service, outbound cell, B2B SaaS outbound, cybersecurity SaaS, AI SaaS, US UK SaaS, South Africa SDR, Apollo CRM outbound, discovery calls"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
@@ -24,13 +23,13 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" 
           rel="stylesheet" 
         />
-        <meta property="og:title" content="Outbound-Growth — Outbound SDR-as-a-Service for US & UK SaaS" />
-        <meta property="og:description" content="Fully managed outbound SDR teams from South Africa. Pipeline for US & UK SaaS—book a discovery call." />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://outbound-growth.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Outbound-Growth — Outbound SDR-as-a-Service for US & UK SaaS" />
-        <meta name="twitter:description" content="Dedicated SDR teams, multi-channel outbound, meetings on your calendar. Book a discovery call." />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header />

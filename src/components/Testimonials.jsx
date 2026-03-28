@@ -1,4 +1,5 @@
 import siteContent from '../../content/site.json';
+import AppLinkText from './AppLinkText';
 
 export default function Testimonials() {
   return (
@@ -28,7 +29,9 @@ export default function Testimonials() {
                 </div>
               </div>
               <blockquote className="text-lg text-ink leading-relaxed mb-6">
-                &ldquo;{testimonial.quote}&rdquo;
+                &ldquo;
+                <AppLinkText>{testimonial.quote}</AppLinkText>
+                &rdquo;
               </blockquote>
               <div className="flex text-accent">
                 {[...Array(5)].map((_, i) => (

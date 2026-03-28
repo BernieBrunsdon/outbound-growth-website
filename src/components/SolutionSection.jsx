@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
+import AppLinkText from './AppLinkText';
 
 export default function SolutionSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,8 +26,12 @@ export default function SolutionSection() {
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-primary font-bold text-lg">{i + 1}</span>
               </div>
-              <h3 className="text-xl font-bold text-ink mb-3">{point.title}</h3>
-              <p className="text-muted leading-relaxed">{point.description}</p>
+              <h3 className="text-xl font-bold text-ink mb-3">
+                <AppLinkText>{point.title}</AppLinkText>
+              </h3>
+              <p className="text-muted leading-relaxed">
+                <AppLinkText>{point.description}</AppLinkText>
+              </p>
             </div>
           ))}
         </div>

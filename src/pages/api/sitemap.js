@@ -28,12 +28,6 @@ export default function handler(req, res) {
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>${baseUrl}/#outcomes</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>${baseUrl}/#contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>

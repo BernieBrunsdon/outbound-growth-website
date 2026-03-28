@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
+import AppLinkText from './AppLinkText';
 
 export default function ServicesGrid() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +32,11 @@ export default function ServicesGrid() {
                       />
                     </svg>
                   </span>
-                  <span className="font-medium leading-snug">{item}</span>
+                  <span className="font-medium leading-snug">
+                    <AppLinkText linkClassName="text-white underline decoration-white/50 underline-offset-2 hover:text-blue-100 font-medium">
+                      {item}
+                    </AppLinkText>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -40,7 +45,9 @@ export default function ServicesGrid() {
           <p
             className={`text-center text-muted text-lg mb-10 max-w-2xl mx-auto ${isVisible ? 'fade-in' : 'opacity-0'}`}
           >
-            {s.closingLine}
+            <AppLinkText linkClassName="text-primary underline decoration-primary/40 underline-offset-2 hover:text-blue-700 font-medium">
+              {s.closingLine}
+            </AppLinkText>
           </p>
 
           <div className={`text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>

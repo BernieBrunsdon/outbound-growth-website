@@ -1,21 +1,22 @@
 {
   "site": {
-    "title": "Outbound-Growth — Outbound SDR-as-a-Service for US & UK SaaS",
-    "description": "Dedicated South African SDR teams for SaaS companies in the US and UK. Fully managed outbound: research, calls, email, LinkedIn, meetings on your calendar.",
+    "title": "Outbound-Growth — SaaS-Enabled Premium Outbound Cell for US & UK B2B SaaS",
+    "description": "Dedicated South African SDR teams for US and UK B2B SaaS (Cybersecurity & AI). OG Pulse Transparency Dashboard, full Apollo/LinkedIn/CRM stack, founder-led implementation.",
     "company": "Outbound-Growth",
     "email": "bernie@outbound-growth.com",
     "phone": "+27 82 555 0123",
     "location": "Cape Town, South Africa (Remote-first)"
   },
   "calendlyUrl": "https://calendly.com/outbound-growth/consult",
+  "appUrl": "https://app.outbound-growth.com",
   "hero": {
-    "headline": "Outbound SDR Teams That Build Pipeline for Your SaaS Company",
-    "subheadline": "We provide dedicated South African SDR teams that generate qualified meetings with your ideal customers.",
+    "headline": "High-Performance Outbound for UK & US SaaS. Powered by Total Transparency.",
+    "subheadline": "Scale your pipeline with dedicated South African SDR teams at a 60% lower cost-per-meeting. Eliminate the 'Black Box' with our real-time tracking engine.",
     "bullets": [
-      "Dedicated SDR team",
-      "Cold calling + email outreach",
-      "ICP research and lead sourcing",
-      "Meetings booked directly into your calendar"
+      "Dedicated Human Experts",
+      "OG Pulse Real-Time Dashboard",
+      "Full CRM & Apollo Stack Included",
+      "Founder-Led Implementation."
     ],
     "primary_cta": {
       "label": "Book a Discovery Call",
@@ -28,35 +29,35 @@
   },
   "solution": {
     "label": "Our solution",
-    "title": "SDR-as-a-Service, fully managed",
-    "subtitle": "One partner owns prospecting end to end. You get pipeline without hiring, training, or day-to-day SDR management.",
+    "title": "SDR-as-a-Service, Fully Transparent.",
+    "subtitle": "A premium outbound cell—not a black-box agency. ROI-first execution with an open-book view of pipeline creation, tuned for US/UK B2B SaaS in Cybersecurity and AI.",
     "points": [
       {
         "title": "Dedicated SDRs",
-        "description": "Reps focused on your accounts, your tone, and your booking link—not a shared pool with divided attention."
+        "description": "Human experts embedded in your motion—your tone, your ICP, your calendar—not a shared pool with divided attention."
       },
       {
-        "title": "Outreach infrastructure",
-        "description": "Dialer, email sequences, and LinkedIn workflows set up and maintained around your compliance and brand."
+        "title": "Full stack included",
+        "description": "Apollo, LinkedIn, dialer, sequences, and CRM workflows maintained in your stack with compliance and brand guardrails."
       },
       {
         "title": "Prospecting strategy",
-        "description": "ICP definition, list building, and message testing aligned to who actually buys your product."
+        "description": "ICP definition, list building, and message testing aimed at buyers who actually close in your category."
       },
       {
         "title": "Campaign management",
-        "description": "Daily execution, follow-up discipline, and iteration on what is working—not one-off blasts."
+        "description": "Daily execution, follow-up discipline, and iteration on what converts—not one-off blasts."
       },
       {
-        "title": "Reporting and optimization",
-        "description": "Clear activity and outcome visibility so you can see volume, responses, and meetings booked."
+        "title": "OG Pulse Monitoring",
+        "description": "Total visibility into the engine. Access live call recordings and logs in The OG Pulse Transparency Dashboard so you never have to wonder if the work is being done."
       }
     ]
   },
   "process": {
     "label": "How it works",
     "title": "From ICP to meetings on your calendar",
-    "subtitle": "A straightforward five-step model—so you always know what happens next.",
+    "subtitle": "The Hybrid Model: combining elite human communication with AI-powered research for maximum efficiency—so you always know what happens next.",
     "steps": [
       {
         "title": "Define your ideal customer profile",
@@ -82,7 +83,7 @@
   },
   "services": {
     "label": "What we run",
-    "title": "Outbound activities we handle",
+    "title": "Outbound execution your cell owns",
     "subtitle": "Everything before the demo: research, outreach, qualification, and handoff—inside your stack where you want it.",
     "activities": [
       "Lead and account research",
@@ -92,9 +93,9 @@
       "LinkedIn prospecting",
       "CRM integration (HubSpot, Salesforce, and common stacks)",
       "Meeting booking into your calendar",
-      "Reporting and analytics"
+      "The OG Pulse Transparency Dashboard"
     ],
-    "closingLine": "Software, management, and HR sit with us—you get a managed seat and a clear view of activity and meetings.",
+    "closingLine": "Software, management, and HR sit with us—you get a managed seat, The OG Pulse Transparency Dashboard, and full visibility into meetings booked.",
     "cta": {
       "label": "Book a Discovery Call",
       "href": "https://calendly.com/outbound-growth/consult"
@@ -102,8 +103,8 @@
   },
   "whySouthAfrica": {
     "label": "Why South African SDRs",
-    "title": "English-first talent at a sustainable cost",
-    "subtitle": "South Africa is a strong fit for US and UK SaaS outbound: communication quality, timezone overlap, and motivation—without San Francisco or London payroll.",
+    "title": "Elite Talent. Global Arbitrage.",
+    "subtitle": "South Africa is a strong fit for US and UK B2B SaaS outbound (Cybersecurity & AI): native-level English, timezone overlap, and serious cost leverage—without San Francisco or London payroll.",
     "points": [
       {
         "title": "Native-level English",
@@ -118,8 +119,8 @@
         "description": "Coverage that lines up with when your buyers are at their desks—without asking your team to work graveyard shifts."
       },
       {
-        "title": "Lower cost than local hire",
-        "description": "Meaningful savings versus building the same capacity in the US or UK—while keeping quality and oversight high."
+        "title": "70% Savings vs. US/UK Hires",
+        "description": "Global arbitrage without cutting corners—your seat includes the full software stack (Apollo, LinkedIn Sales Navigator, CRM, dialer) so you are not buying tools twice."
       },
       {
         "title": "Motivated, dedicated teams",
@@ -129,8 +130,8 @@
   },
   "idealClients": {
     "label": "Who we work with",
-    "title": "Built for B2B SaaS in the US and UK",
-    "subtitle": "We do our best work with teams that sell a defined product to a defined buyer—and need consistent meetings, not ad-hoc campaigns.",
+    "title": "Built for US & UK B2B SaaS—Cybersecurity & AI first",
+    "subtitle": "We do our best work with teams that sell a defined product to a defined buyer—and need a transparent outbound cell with predictable pipeline, not a generic agency retainer.",
     "audience": [
       "SaaS founders",
       "CROs and Heads of Sales",
@@ -146,35 +147,8 @@
       "Revenue tech"
     ]
   },
-  "outcomes": {
-    "label": "What to expect",
-    "title": "Outcomes that match how outbound actually works",
-    "subtitle": "We do not promise magic numbers. We promise a managed function aimed at qualified conversations and a fuller top of funnel.",
-    "items": [
-      {
-        "title": "More qualified meetings",
-        "description": "Steady effort against your ICP—so sales sees conversations with buyers who fit, not random fills."
-      },
-      {
-        "title": "Consistent outbound pipeline",
-        "description": "Activity and sourcing that does not stop when your team is on a release cycle or at a conference."
-      },
-      {
-        "title": "Predictable lead generation rhythm",
-        "description": "Defined touchpoints and reporting so you know what ran, what landed, and what to tweak."
-      },
-      {
-        "title": "Faster expansion into new segments",
-        "description": "A team that can test verticals or geos with structured outreach while you keep closing core deals."
-      }
-    ]
-  },
   "finalCta": {
-    "title": "Ready to build a predictable outbound pipeline?",
-    "subtitle": "Book a discovery call with our team. We will walk through your ICP, motion, and whether SDR-as-a-Service is the right fit.",
-    "primary_label": "Book Your Discovery Call",
-    "secondary_label": "See how it works",
-    "secondary_href": "#process"
+    "launch_phase_note": "Currently accepting only 2 partners for our founder-led launch phase."
   },
   "testimonials": [
     {
@@ -185,7 +159,7 @@
       "color": "#0B63D6"
     },
     {
-      "quote": "We did not want to hire and train SDRs in London. The South Africa team integrated into HubSpot and Slack quickly; reporting was straightforward.",
+      "quote": "We did not want to hire and train SDRs in London. The South Africa team integrated into HubSpot and Slack quickly; The OG Pulse Transparency Dashboard made oversight straightforward.",
       "author": "Client partner",
       "title": "Head of Growth, SaaS",
       "initials": "HG",

@@ -1,14 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import siteContent from '../../content/site.json';
+import AppLinkText from './AppLinkText';
+import { CLIENT_APP_URL } from '../lib/appUrl';
 
 export default function Footer() {
   const quickLinks = [
     { name: 'How it works', href: '#process' },
     { name: 'Why South Africa', href: '#why-sa' },
     { name: 'Ideal clients', href: '#clients' },
-    { name: 'Book a call', href: '#book-call' },
+    { name: 'Book a call', href: '#contact' },
     { name: 'Contact', href: '#contact' },
+    {
+      name: 'Client Login',
+      href: CLIENT_APP_URL,
+      external: true,
+      small: true,
+    },
   ];
 
   const socialLinks = [
@@ -38,11 +46,17 @@ export default function Footer() {
               <div className="relative w-32 h-10 mb-2">
                 <Image src="/images/logo.png" alt="Outbound-Growth Logo" fill className="object-contain" />
               </div>
-              <div className="text-sm text-gray-300">Outbound SDR-as-a-Service · US &amp; UK SaaS</div>
+              <div className="text-sm text-gray-300">
+                <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
+                  SaaS-Enabled Premium Outbound Cell · OG Pulse · US &amp; UK B2B SaaS
+                </AppLinkText>
+              </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Dedicated South African SDR teams for SaaS companies in the US and UK. Fully managed outbound—research,
-              multi-channel outreach, qualification, and meetings on your calendar.
+              <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
+                Dedicated South African SDR experts with The OG Pulse Transparency Dashboard—research, Apollo/LinkedIn/CRM
+                execution, qualification, and meetings on your calendar. Cybersecurity &amp; AI focus.
+              </AppLinkText>
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -65,9 +79,24 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200">
-                    {link.name}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={
+                        link.small
+                          ? 'text-sm text-gray-400 hover:text-white transition-colors duration-200'
+                          : 'text-gray-300 hover:text-white transition-colors duration-200'
+                      }
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

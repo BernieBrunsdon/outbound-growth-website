@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import siteContent from '../../content/site.json';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -77,8 +78,13 @@ export default function ContactForm() {
             Ready to Transform Your Sales?
           </h2>
             <p className="text-xl text-muted max-w-3xl mx-auto">
-              Book a consultation or request the pilot pack. We work with UK &amp; US SaaS companies and accept GBP/USD payments.
+              Book a consultation or request the pilot pack. We work with UK &amp; US B2B SaaS (Cybersecurity &amp; AI) and accept GBP/USD payments.
             </p>
+            {siteContent.finalCta?.launch_phase_note ? (
+              <p className="text-sm text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
+                {siteContent.finalCta.launch_phase_note}
+              </p>
+            ) : null}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -218,11 +224,10 @@ export default function ContactForm() {
             </form>
           </div>
 
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-ink mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-semibold text-ink mb-6">Contact Information</h3>
+
+            <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -265,22 +270,6 @@ export default function ContactForm() {
                     <div className="text-sm text-muted">Remote-first</div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6">
-              <h4 className="font-semibold text-ink mb-3">Quick Response</h4>
-              <p className="text-sm text-muted mb-4">
-                We typically respond to all inquiries within 24 hours during business days.
-              </p>
-              <a
-                href="https://calendly.com/outbound-growth/consult"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover"
-              >
-Book a Discovery Call
-              </a>
             </div>
           </div>
         </div>

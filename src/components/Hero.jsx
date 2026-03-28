@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
+import AppLinkText from './AppLinkText';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,17 +17,21 @@ export default function Hero() {
           <div className={`space-y-8 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
             <div className="space-y-6">
               <p className="text-sm font-semibold text-primary uppercase tracking-wider">
-                Outbound SDR-as-a-Service · US &amp; UK SaaS
+                Outbound-Growth · US &amp; UK B2B SaaS · Cybersecurity &amp; AI
               </p>
               <h1 className="text-4xl font-bold text-ink leading-tight">{hero.headline}</h1>
-              <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-2xl">{hero.subheadline}</p>
+              <p className="text-xl md:text-2xl text-muted leading-relaxed max-w-2xl">
+                <AppLinkText>{hero.subheadline}</AppLinkText>
+              </p>
             </div>
 
             <ul className="space-y-3 text-ink">
               {(hero.bullets || []).map((b, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-accent flex-shrink-0" aria-hidden />
-                  <span className="font-medium">{b}</span>
+                  <span className="font-medium">
+                    <AppLinkText>{b}</AppLinkText>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -55,7 +60,10 @@ export default function Hero() {
               <div className="relative bg-white rounded-2xl shadow-2xl p-8 transform -rotate-1">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-ink">SDR activity · your accounts</h3>
+                    <h3 className="text-lg font-semibold text-ink">
+                      Live Engine:{' '}
+                      <AppLinkText>OG Pulse Dashboard</AppLinkText>
+                    </h3>
                     <div className="w-3 h-3 bg-green-500 rounded-full" aria-hidden />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
@@ -77,7 +85,7 @@ export default function Hero() {
                     </div>
                   </div>
                   <p className="text-xs text-muted">
-                    Reporting tailored to your cadence—so leadership sees activity and pipeline, not black boxes.
+                    Manage your remote sales cell with more visibility than an in-house hire. Listen to calls, track dials, and view pipeline in real-time.
                   </p>
                 </div>
               </div>

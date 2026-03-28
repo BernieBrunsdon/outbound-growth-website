@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { CLIENT_APP_URL } from '../lib/appUrl';
 
 const CALENDLY = 'https://calendly.com/outbound-growth/consult';
 
@@ -62,6 +63,14 @@ export default function Header() {
 
           <div className="hidden md:flex items-center space-x-4 shrink-0">
             <a
+              href={CLIENT_APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide whitespace-nowrap"
+            >
+              Client Login
+            </a>
+            <a
               href={CALENDLY}
               target="_blank"
               rel="noopener noreferrer"
@@ -99,6 +108,15 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href={CLIENT_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Client Login
+              </a>
               <div className="pt-4 border-t border-gray-200">
                 <a
                   href={CALENDLY}
