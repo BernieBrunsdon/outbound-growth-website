@@ -1,0 +1,42 @@
+# Render Blueprint — marketing site (Next.js)
+# Apply: Dashboard → Blueprints → New Blueprint Instance → select this repo
+# After deploy: Settings → Environment → fill secrets marked sync:false, then Custom Domains
+
+services:
+  - type: web
+    name: outbound-growth-website
+    runtime: node
+    region: frankfurt
+    # Use `starter` or higher when you need always-on (free tier spins down after inactivity)
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      # Required for /admin client-side gate (set in Dashboard)
+      - key: NEXT_PUBLIC_ADMIN_PASS
+        sync: false
+      # Firestore contact form (set in Dashboard)
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+      # Optional — email notifications from contact form
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
