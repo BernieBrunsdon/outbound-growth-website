@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Outbound-Growth — SaaS-Enabled Premium Outbound Cell for US & UK B2B SaaS",
-    "description": "Dedicated South African SDR teams for US and UK B2B SaaS (Cybersecurity & AI). OG Pulse Transparency Dashboard, full Apollo/LinkedIn/CRM stack.",
+    "title": "Outbound-Growth — Premium Outbound Cell with Total Transparency",
+    "description": "Dedicated South African SDR teams for ambitious growth companies. OG Pulse Transparency Dashboard and a full outbound software suite.",
     "company": "Outbound-Growth",
     "email": "Enquiries@outbound-growth.com",
     "phoneUk": {
@@ -18,7 +18,7 @@
   },
   "appUrl": "https://app.outbound-growth.com",
   "hero": {
-    "headline": "High-Performance Outbound for UK & US SaaS. Powered by Total Transparency.",
+    "headline": "High-Performance Outbound for Growth-Focused Teams. Powered by Total Transparency.",
     "subheadline": "Scale your pipeline with dedicated South African SDR teams at a 60% lower cost-per-meeting. Eliminate the 'Black Box' with our real-time tracking engine.",
     "bullets": [
       "Dedicated Human Experts",
@@ -36,7 +36,7 @@
   "solution": {
     "label": "Our solution",
     "title": "SDR-as-a-Service, Fully Transparent.",
-    "subtitle": "A premium outbound cell—not a black-box agency. ROI-first execution with an open-book view of pipeline creation, tuned for US/UK B2B SaaS in Cybersecurity and AI.",
+    "subtitle": "A premium outbound cell—not a black-box agency. ROI-first execution with an open-book view of pipeline creation for teams across multiple sectors.",
     "points": [
       {
         "title": "Dedicated SDRs",
@@ -44,7 +44,7 @@
       },
       {
         "title": "Full stack included",
-        "description": "Apollo, LinkedIn, dialer, sequences, and CRM workflows maintained in your stack with compliance and brand guardrails."
+        "description": "We run a full outbound software suite with our own systems and tools, so your campaigns stay fast, consistent, and fully managed."
       },
       {
         "title": "Prospecting strategy",
@@ -63,7 +63,7 @@
   "process": {
     "label": "How it works",
     "title": "From ICP to meetings on your calendar",
-    "subtitle": "The Hybrid Model: combining elite human communication with AI-powered research for maximum efficiency—so you always know what happens next.",
+    "subtitle": "The hybrid model: combining elite human communication with smart research workflows for maximum efficiency—so you always know what happens next.",
     "steps": [
       {
         "title": "Define your ideal customer profile",
@@ -109,7 +109,7 @@
   "whySouthAfrica": {
     "label": "Why South African SDRs",
     "title": "Elite Talent. Global Arbitrage.",
-    "subtitle": "South Africa is a strong fit for US and UK B2B SaaS outbound (Cybersecurity & AI): native-level English, timezone overlap, and serious cost leverage—without San Francisco or London payroll.",
+    "subtitle": "South Africa is a strong fit for global outbound teams: native-level English, timezone overlap, and serious cost leverage—without sacrificing quality.",
     "points": [
       {
         "title": "Native-level English",
@@ -120,11 +120,11 @@
         "description": "A deep bench of reps used to B2B outreach, coaching, and metric-driven work."
       },
       {
-        "title": "US and UK timezone overlap",
+        "title": "Global timezone overlap",
         "description": "Coverage that lines up with when your buyers are at their desks—without asking your team to work graveyard shifts."
       },
       {
-        "title": "70% Savings vs. US/UK Hires",
+        "title": "70% savings vs. many local hires",
         "description": "Global arbitrage without cutting corners—your seat includes the full software stack (Apollo, LinkedIn Sales Navigator, CRM, dialer) so you are not buying tools twice."
       },
       {
@@ -140,14 +140,14 @@
     {
       "quote": "Outbound-Growth gave us a reliable outbound rhythm. Their SDRs sounded like part of our team and kept our AE calendar busy with real conversations.",
       "author": "Client partner",
-      "title": "VP Sales, B2B SaaS",
+      "title": "VP Sales",
       "initials": "VP",
       "color": "#0B63D6"
     },
     {
       "quote": "We did not want to hire and train SDRs in London. The South Africa team integrated into HubSpot and Slack quickly; The OG Pulse Transparency Dashboard made oversight straightforward.",
       "author": "Client partner",
-      "title": "Head of Growth, SaaS",
+      "title": "Head of Growth",
       "initials": "HG",
       "color": "#06A77D"
     }

@@ -48,14 +48,14 @@ export default function Footer() {
               </div>
               <div className="text-sm text-gray-300">
                 <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                  SaaS-Enabled Premium Outbound Cell · OG Pulse · US &amp; UK B2B SaaS
+                  Premium Outbound Cell · OG Pulse · Multi-Industry
                 </AppLinkText>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                Dedicated South African SDR experts with The OG Pulse Transparency Dashboard—research, Apollo/LinkedIn/CRM
-                execution, qualification, and meetings on your calendar. Cybersecurity &amp; AI focus.
+                Dedicated South African SDR experts with The OG Pulse Transparency Dashboard—research, outreach
+                execution, qualification, and meetings on your calendar across multiple industries.
               </AppLinkText>
             </p>
             <div className="flex space-x-4">

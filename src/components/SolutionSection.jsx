@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
 import { useBookDemoModal } from '../context/BookDemoModalContext';
@@ -36,6 +37,24 @@ export default function SolutionSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className={`mt-12 ${isVisible ? 'fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.45s' }}>
+          <div className="relative max-w-5xl mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/15 to-accent/10 rounded-3xl transform rotate-1" />
+            <div className="relative bg-white rounded-3xl shadow-2xl p-3 md:p-4 border border-gray-100 overflow-hidden">
+              <Image
+                src="/images/og-pulse-solution-showcase.png"
+                alt="OG Pulse solution dashboard across multiple devices"
+                width={1280}
+                height={768}
+                className="w-full h-auto rounded-2xl object-cover scale-[1.2] -translate-x-4 -translate-y-4"
+              />
+            </div>
+          </div>
+          <p className="text-center text-sm text-muted mt-4 max-w-3xl mx-auto">
+            A transparent outbound engine you can review at any time, from campaign activity to meeting flow.
+          </p>
         </div>
 
         <div className={`mt-14 text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
 import { useBookDemoModal } from '../context/BookDemoModalContext';
@@ -51,6 +52,21 @@ export default function ServicesGrid() {
               {s.closingLine}
             </AppLinkText>
           </p>
+
+          <div className={`mb-10 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
+            <div className="relative bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+              <Image
+                src="/images/og-pulse-multidevice-preview.png"
+                alt="OG Pulse dashboard preview shown on tablet and mobile devices"
+                width={1280}
+                height={768}
+                className="w-full h-auto object-cover scale-[1.2] -translate-x-4 -translate-y-4"
+              />
+            </div>
+            <p className="text-center text-sm text-muted mt-3">
+              Track performance across desktop and mobile with your OG Pulse client dashboard.
+            </p>
+          </div>
 
           <div className={`text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>
             <button

@@ -57,8 +57,8 @@ export default function ContactForm() {
             Ready to Transform Your Sales?
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Book a consultation or request the pilot pack. We work with UK &amp; US B2B SaaS (Cybersecurity &amp; AI) and
-            accept GBP/USD payments.
+            Book a consultation or request the pilot pack. We support teams across sectors and regions with flexible
+            engagement options.
           </p>
           {siteContent.finalCta?.launch_phase_note ? (
             <p className="text-sm text-muted mt-4 max-w-2xl mx-auto leading-relaxed">

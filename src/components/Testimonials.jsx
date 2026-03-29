@@ -11,7 +11,7 @@ export default function Testimonials() {
           <div className="text-section-label mb-4">Testimonials</div>
           <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">What clients say</h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Teams selling into the US and UK—from SaaS scale-ups to revenue leaders.
+            Teams across industries, from growth-stage companies to established revenue leaders.
           </p>
         </div>
 
