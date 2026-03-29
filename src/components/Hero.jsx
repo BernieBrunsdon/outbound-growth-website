@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
+import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function Hero() {
+  const { openModal } = useBookDemoModal();
   const [isVisible, setIsVisible] = useState(false);
   const hero = siteContent.hero;
 
@@ -37,14 +39,13 @@ export default function Hero() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-2">
-              <a
-                href={hero.primary_cta.href}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => openModal()}
                 className="bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg text-center hover:bg-blue-700 transition-all duration-200 btn-hover shadow-xl"
               >
                 {hero.primary_cta.label}
-              </a>
+              </button>
               <a
                 href={hero.secondary_cta.href}
                 className="border-2 border-primary text-primary px-10 py-5 rounded-xl font-bold text-lg text-center hover:bg-primary hover:text-white transition-all duration-200 btn-hover"

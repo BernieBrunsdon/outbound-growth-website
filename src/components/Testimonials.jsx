@@ -1,7 +1,9 @@
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
+import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function Testimonials() {
+  const { openModal } = useBookDemoModal();
   return (
     <section id="testimonials" className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,14 +47,13 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-14 text-center">
-          <a
-            href={siteContent.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => openModal()}
             className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover"
           >
             Book a Discovery Call
-          </a>
+          </button>
         </div>
       </div>
     </section>

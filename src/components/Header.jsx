@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CLIENT_APP_URL } from '../lib/appUrl';
-
-const CALENDLY = 'https://calendly.com/outbound-growth/consult';
+import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function Header() {
+  const { openModal } = useBookDemoModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -70,14 +70,13 @@ export default function Header() {
             >
               Client Login
             </a>
-            <a
-              href={CALENDLY}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => openModal()}
               className="bg-primary text-white px-5 py-2 rounded-lg font-semibold text-xs uppercase tracking-wide hover:bg-blue-700 transition-all duration-200 btn-hover shadow-md whitespace-nowrap"
             >
               Book a Discovery Call
-            </a>
+            </button>
           </div>
 
           <button
@@ -118,14 +117,16 @@ export default function Header() {
                 Client Login
               </a>
               <div className="pt-4 border-t border-gray-200">
-                <a
-                  href={CALENDLY}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    openModal();
+                  }}
                   className="block w-full bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide text-center hover:bg-blue-700 transition-all duration-200 shadow-lg"
                 >
                   Book a Discovery Call
-                </a>
+                </button>
               </div>
             </div>
           </div>

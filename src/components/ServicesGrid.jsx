@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
+import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function ServicesGrid() {
+  const { openModal } = useBookDemoModal();
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => setIsVisible(true), []);
   const s = siteContent.services;
@@ -51,14 +53,13 @@ export default function ServicesGrid() {
           </p>
 
           <div className={`text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-            <a
-              href={s.cta.href}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => openModal()}
               className="inline-block bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-200 btn-hover shadow-xl"
             >
               {s.cta.label}
-            </a>
+            </button>
           </div>
         </div>
       </div>

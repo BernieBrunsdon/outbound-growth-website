@@ -7,7 +7,6 @@
     "phone": "+27 82 555 0123",
     "location": "Cape Town, South Africa (Remote-first)"
   },
-  "calendlyUrl": "https://calendly.com/outbound-growth/consult",
   "appUrl": "https://app.outbound-growth.com",
   "hero": {
     "headline": "High-Performance Outbound for UK & US SaaS. Powered by Total Transparency.",
@@ -19,8 +18,7 @@
       "Founder-Led Implementation."
     ],
     "primary_cta": {
-      "label": "Book a Discovery Call",
-      "href": "https://calendly.com/outbound-growth/consult"
+      "label": "Book a Discovery Call"
     },
     "secondary_cta": {
       "label": "See How It Works",
@@ -97,8 +95,7 @@
     ],
     "closingLine": "Software, management, and HR sit with us—you get a managed seat, The OG Pulse Transparency Dashboard, and full visibility into meetings booked.",
     "cta": {
-      "label": "Book a Discovery Call",
-      "href": "https://calendly.com/outbound-growth/consult"
+      "label": "Book a Discovery Call"
     }
   },
   "whySouthAfrica": {

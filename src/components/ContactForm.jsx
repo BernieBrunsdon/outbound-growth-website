@@ -1,30 +1,20 @@
 import { useState } from 'react';
 import siteContent from '../../content/site.json';
+import { submitContactLead } from '../lib/contactSubmit';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    service: '',
     message: '',
-    bookConsultation: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const serviceOptions = [
-    'Managed SDR seat (discovery)',
-    'US / UK SaaS outbound',
-    'General inquiry',
-  ];
-
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -33,15 +23,10 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          type: formData.bookConsultation ? 'consultation' : 'proposal',
-        }),
+      const response = await submitContactLead({
+        ...formData,
+        type: 'contact_section',
+        service: 'Contact form (page footer)',
       });
 
       if (response.ok) {
@@ -50,14 +35,8 @@ export default function ContactForm() {
           name: '',
           email: '',
           company: '',
-          service: '',
           message: '',
-          bookConsultation: false,
         });
-
-        if (formData.bookConsultation) {
-          window.open('https://calendly.com/outbound-growth/consult', '_blank');
-        }
       } else {
         setSubmitStatus('error');
       }
@@ -77,20 +56,21 @@ export default function ContactForm() {
           <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
             Ready to Transform Your Sales?
           </h2>
-            <p className="text-xl text-muted max-w-3xl mx-auto">
-              Book a consultation or request the pilot pack. We work with UK &amp; US B2B SaaS (Cybersecurity &amp; AI) and accept GBP/USD payments.
+          <p className="text-xl text-muted max-w-3xl mx-auto">
+            Book a consultation or request the pilot pack. We work with UK &amp; US B2B SaaS (Cybersecurity &amp; AI) and
+            accept GBP/USD payments.
+          </p>
+          {siteContent.finalCta?.launch_phase_note ? (
+            <p className="text-sm text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
+              {siteContent.finalCta.launch_phase_note}
             </p>
-            {siteContent.finalCta?.launch_phase_note ? (
-              <p className="text-sm text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
-                {siteContent.finalCta.launch_phase_note}
-              </p>
-            ) : null}
+          ) : null}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="card p-8">
             <h3 className="text-2xl font-semibold text-ink mb-6">Get in Touch</h3>
-            
+
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
                 Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
@@ -155,27 +135,6 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-ink mb-2">
-                  Service Interest *
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  {serviceOptions.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-ink mb-2">
                   Message *
                 </label>
@@ -191,36 +150,13 @@ export default function ContactForm() {
                 />
               </div>
 
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="bookConsultation"
-                  name="bookConsultation"
-                  checked={formData.bookConsultation}
-                  onChange={handleChange}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
-                />
-                <label htmlFor="bookConsultation" className="ml-2 text-sm text-ink">
-                  Open calendar to book a discovery call after send
-                </label>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="flex-1 bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Sending...' : 'Book a Discovery Call'}
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="flex-1 border-2 border-primary text-primary py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-200 btn-hover disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Request Proposal
-                </button>
-              </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : 'Book a Discovery Call'}
+              </button>
             </form>
           </div>
 
@@ -228,48 +164,68 @@ export default function ContactForm() {
             <h3 className="text-2xl font-semibold text-ink mb-6">Contact Information</h3>
 
             <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-ink">Email</div>
-                    <a href="mailto:bernie@outbound-growth.com" className="text-primary hover:underline">
-                      bernie@outbound-growth.com
-                    </a>
-                  </div>
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
                 </div>
+                <div>
+                  <div className="font-semibold text-ink">Email</div>
+                  <a href="mailto:bernie@outbound-growth.com" className="text-primary hover:underline">
+                    bernie@outbound-growth.com
+                  </a>
+                </div>
+              </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-ink">Phone</div>
-                    <a href="tel:+27825550123" className="text-primary hover:underline">
-                      +27 82 555 0123
-                    </a>
-                    <div className="text-sm text-muted">WhatsApp available</div>
-                  </div>
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
                 </div>
+                <div>
+                  <div className="font-semibold text-ink">Phone</div>
+                  <a href="tel:+27825550123" className="text-primary hover:underline">
+                    +27 82 555 0123
+                  </a>
+                  <div className="text-sm text-muted">WhatsApp available</div>
+                </div>
+              </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-ink">Location</div>
-                    <div className="text-muted">Cape Town, South Africa</div>
-                    <div className="text-sm text-muted">Remote-first</div>
-                  </div>
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
                 </div>
+                <div>
+                  <div className="font-semibold text-ink">Location</div>
+                  <div className="text-muted">Cape Town, South Africa</div>
+                  <div className="text-sm text-muted">Remote-first</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

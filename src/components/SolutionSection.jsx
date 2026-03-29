@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import siteContent from '../../content/site.json';
 import AppLinkText from './AppLinkText';
+import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function SolutionSection() {
+  const { openModal } = useBookDemoModal();
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => setIsVisible(true), []);
   const c = siteContent.solution;
@@ -37,14 +39,13 @@ export default function SolutionSection() {
         </div>
 
         <div className={`mt-14 text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-          <a
-            href={siteContent.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={() => openModal()}
             className="inline-block bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-200 btn-hover shadow-xl"
           >
             Book a Discovery Call
-          </a>
+          </button>
         </div>
       </div>
     </section>

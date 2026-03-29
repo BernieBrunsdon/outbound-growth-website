@@ -10,10 +10,13 @@ export default async function handler(req, res) {
 
   const { name, email, company, service, message, type, bookConsultation } = req.body;
 
-  // Validate required fields
-  if (!name || !email || !company || !service || !message) {
+  // Validate required fields (service defaults for simplified forms)
+  if (!name || !email || !company || !message) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
+
+  const serviceLabel =
+    typeof service === 'string' && service.trim() ? service.trim() : 'Website contact';
 
   // Create contact object
   const contact = {
@@ -22,10 +25,10 @@ export default async function handler(req, res) {
     name,
     email,
     company,
-    service,
+    service: serviceLabel,
     message,
     type: type || 'general',
-    bookConsultation: bookConsultation || false,
+    bookConsultation: Boolean(bookConsultation),
   };
 
   try {
@@ -86,7 +89,7 @@ export default async function handler(req, res) {
 
 async function sendEmail(contact) {
   try {
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT || 587,
       secure: process.env.SMTP_PORT === '465',
@@ -106,8 +109,8 @@ async function sendEmail(contact) {
         <p><strong>Name:</strong> ${contact.name}</p>
         <p><strong>Email:</strong> ${contact.email}</p>
         <p><strong>Company:</strong> ${contact.company}</p>
-        <p><strong>Service Interest:</strong> ${contact.service}</p>
-        <p><strong>Book Consultation:</strong> ${contact.bookConsultation ? 'Yes' : 'No'}</p>
+        <p><strong>Source / service:</strong> ${contact.service}</p>
+        ${contact.bookConsultation ? '<p><strong>Book Consultation:</strong> Yes</p>' : ''}
         <p><strong>Message:</strong></p>
         <p>${contact.message.replace(/\n/g, '<br>')}</p>
         <hr>
