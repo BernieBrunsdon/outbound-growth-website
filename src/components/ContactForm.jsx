@@ -177,8 +177,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <div className="font-semibold text-ink">Email</div>
-                  <a href="mailto:bernie@outbound-growth.com" className="text-primary hover:underline">
-                    bernie@outbound-growth.com
+                  <a href={`mailto:${siteContent.site.email}`} className="text-primary hover:underline break-all">
+                    {siteContent.site.email}
                   </a>
                 </div>
               </div>
@@ -194,12 +194,24 @@ export default function ContactForm() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div className="space-y-3">
                   <div className="font-semibold text-ink">Phone</div>
-                  <a href="tel:+27825550123" className="text-primary hover:underline">
-                    +27 82 555 0123
-                  </a>
-                  <div className="text-sm text-muted">WhatsApp available</div>
+                  <div>
+                    <div className="text-xs font-medium text-muted uppercase tracking-wide mb-0.5">
+                      {siteContent.site.phoneUk.label}
+                    </div>
+                    <a href={`tel:${siteContent.site.phoneUk.tel}`} className="text-primary hover:underline">
+                      {siteContent.site.phoneUk.display}
+                    </a>
+                  </div>
+                  <div>
+                    <div className="text-xs font-medium text-muted uppercase tracking-wide mb-0.5">
+                      {siteContent.site.phoneUs.label}
+                    </div>
+                    <a href={`tel:${siteContent.site.phoneUs.tel}`} className="text-primary hover:underline">
+                      {siteContent.site.phoneUs.display}
+                    </a>
+                  </div>
                 </div>
               </div>
 

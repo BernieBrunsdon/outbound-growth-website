@@ -30,7 +30,10 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-28">
-          <Link href="/" className="flex items-center h-28">
+          <Link
+            href="/"
+            className="flex items-center shrink-0 rounded-xl focus-visible:outline-none -my-1 py-1"
+          >
             <img
               src="/images/Title (4).png"
               alt="Outbound-Growth Logo"
@@ -54,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide"
+                className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
               >
                 {item.name}
               </Link>
@@ -66,21 +69,21 @@ export default function Header() {
               href={CLIENT_APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide whitespace-nowrap"
+              className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide whitespace-nowrap rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
             >
               Client Login
             </a>
             <button
               type="button"
               onClick={() => openModal()}
-              className="bg-primary text-white px-5 py-2 rounded-lg font-semibold text-xs uppercase tracking-wide hover:bg-blue-700 transition-all duration-200 btn-hover shadow-md whitespace-nowrap"
+              className="bg-primary text-white px-5 py-2 rounded-lg font-semibold text-xs uppercase tracking-wide hover:bg-blue-700 transition-all duration-200 btn-hover shadow-md whitespace-nowrap focus-visible:outline-none"
             >
               Book a Discovery Call
             </button>
           </div>
 
           <button
-            className="xl:hidden p-3 rounded-xl text-ink hover:bg-gray-100 transition-colors duration-200"
+            className="xl:hidden p-3 rounded-xl text-ink hover:bg-gray-100 transition-colors duration-200 focus-visible:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -101,7 +104,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide"
+                  className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide focus-visible:outline-none"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -111,7 +114,7 @@ export default function Header() {
                 href={CLIENT_APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide"
+                className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide focus-visible:outline-none"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Client Login
@@ -123,7 +126,7 @@ export default function Header() {
                     setIsMenuOpen(false);
                     openModal();
                   }}
-                  className="block w-full bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide text-center hover:bg-blue-700 transition-all duration-200 shadow-lg"
+                  className="block w-full bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide text-center hover:bg-blue-700 transition-all duration-200 shadow-lg focus-visible:outline-none"
                 >
                   Book a Discovery Call
                 </button>

@@ -8,7 +8,7 @@ export default function Footer() {
   const quickLinks = [
     { name: 'How it works', href: '#process' },
     { name: 'Why South Africa', href: '#why-sa' },
-    { name: 'Ideal clients', href: '#clients' },
+    { name: 'Clients', href: '#clients' },
     { name: 'Book a call', href: '#contact' },
     { name: 'Contact', href: '#contact' },
     {
@@ -113,13 +113,25 @@ export default function Footer() {
                   {siteContent.site.email}
                 </a>
               </div>
-              <div>
-                <a
-                  href={`tel:${siteContent.site.phone.replace(/\s/g, '')}`}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  {siteContent.site.phone}
-                </a>
+              <div className="space-y-1">
+                <div>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">{siteContent.site.phoneUk.label}</span>
+                  <a
+                    href={`tel:${siteContent.site.phoneUk.tel}`}
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {siteContent.site.phoneUk.display}
+                  </a>
+                </div>
+                <div>
+                  <span className="text-gray-500 text-xs uppercase tracking-wide">{siteContent.site.phoneUs.label}</span>
+                  <a
+                    href={`tel:${siteContent.site.phoneUs.tel}`}
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {siteContent.site.phoneUs.display}
+                  </a>
+                </div>
               </div>
               <div className="text-gray-300">{siteContent.site.location}</div>
             </div>

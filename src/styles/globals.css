@@ -51,9 +51,22 @@ a {
   background: #0a52b8;
 }
 
-*:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+/* Avoid harsh outlines on mouse/tap; keep clear keyboard focus */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(11, 99, 214, 0.45);
+  border-radius: 6px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
 }
 
 .btn-hover:hover {

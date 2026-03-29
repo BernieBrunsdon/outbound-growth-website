@@ -1,10 +1,19 @@
 {
   "site": {
     "title": "Outbound-Growth — SaaS-Enabled Premium Outbound Cell for US & UK B2B SaaS",
-    "description": "Dedicated South African SDR teams for US and UK B2B SaaS (Cybersecurity & AI). OG Pulse Transparency Dashboard, full Apollo/LinkedIn/CRM stack, founder-led implementation.",
+    "description": "Dedicated South African SDR teams for US and UK B2B SaaS (Cybersecurity & AI). OG Pulse Transparency Dashboard, full Apollo/LinkedIn/CRM stack.",
     "company": "Outbound-Growth",
-    "email": "bernie@outbound-growth.com",
-    "phone": "+27 82 555 0123",
+    "email": "Enquiries@outbound-growth.com",
+    "phoneUk": {
+      "label": "UK",
+      "display": "+44 20 0000 0000",
+      "tel": "+442000000000"
+    },
+    "phoneUs": {
+      "label": "US",
+      "display": "+1 (555) 000-0000",
+      "tel": "+15550000000"
+    },
     "location": "Cape Town, South Africa (Remote-first)"
   },
   "appUrl": "https://app.outbound-growth.com",
@@ -14,8 +23,7 @@
     "bullets": [
       "Dedicated Human Experts",
       "OG Pulse Real-Time Dashboard",
-      "Full CRM & Apollo Stack Included",
-      "Founder-Led Implementation."
+      "Full CRM & Apollo Stack Included"
     ],
     "primary_cta": {
       "label": "Book a Discovery Call"
@@ -123,25 +131,6 @@
         "title": "Motivated, dedicated teams",
         "description": "Reps who treat your pipeline as their job—because it is."
       }
-    ]
-  },
-  "idealClients": {
-    "label": "Who we work with",
-    "title": "Built for US & UK B2B SaaS—Cybersecurity & AI first",
-    "subtitle": "We do our best work with teams that sell a defined product to a defined buyer—and need a transparent outbound cell with predictable pipeline, not a generic agency retainer.",
-    "audience": [
-      "SaaS founders",
-      "CROs and Heads of Sales",
-      "Sales and revenue leaders"
-    ],
-    "companyProfile": "Seed to Series B, early-growth SaaS, and any team that needs pipeline without building an internal SDR org.",
-    "industries": [
-      "B2B SaaS",
-      "FinTech",
-      "AI & ML startups",
-      "Developer tools",
-      "Cybersecurity",
-      "Revenue tech"
     ]
   },
   "finalCta": {
