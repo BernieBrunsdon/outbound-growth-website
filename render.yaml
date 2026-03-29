@@ -12,14 +12,13 @@ services:
     plan: free
     branch: main
     autoDeploy: true
-    buildCommand: npm ci && npm run build
+    # Install devDependencies (Tailwind, PostCSS, ESLint) — do not set NODE_ENV=production for install
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /
     envVars:
       - key: NODE_VERSION
         value: "20"
-      - key: NODE_ENV
-        value: production
       # Required for /admin client-side gate (set in Dashboard)
       - key: NEXT_PUBLIC_ADMIN_PASS
         sync: false
