@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Outbound-Growth — Premium Outbound Cell with Total Transparency",
+    "title": "Outbound-Growth — Premium SDR Service with Total Transparency",
     "description": "Dedicated South African SDR teams for ambitious growth companies. OG Pulse Transparency Dashboard and a full outbound software suite.",
     "company": "Outbound-Growth",
     "email": "Enquiries@outbound-growth.com",
@@ -36,7 +36,7 @@
   "solution": {
     "label": "Our solution",
     "title": "SDR-as-a-Service, Fully Transparent.",
-    "subtitle": "A premium outbound cell—not a black-box agency. ROI-first execution with an open-book view of pipeline creation for teams across multiple sectors.",
+    "subtitle": "A premium SDR service—not a black-box agency. ROI-first execution with an open-book view of pipeline creation for teams across multiple sectors.",
     "points": [
       {
         "title": "Dedicated SDRs",
@@ -89,7 +89,7 @@
   },
   "services": {
     "label": "What we run",
-    "title": "Outbound execution your cell owns",
+    "title": "Outbound execution your SDR team owns",
     "subtitle": "Everything before the demo: research, outreach, qualification, and handoff—inside your stack where you want it.",
     "activities": [
       "Lead and account research",

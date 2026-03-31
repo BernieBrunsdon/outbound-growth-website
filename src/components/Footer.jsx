@@ -48,7 +48,7 @@ export default function Footer() {
               </div>
               <div className="text-sm text-gray-300">
                 <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                  Premium Outbound Cell · OG Pulse · Multi-Industry
+                  Premium SDR Service · OG Pulse · Multi-Industry
                 </AppLinkText>
               </div>
             </div>

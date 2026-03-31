@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         <meta name="description" content={description} />
         <meta
           name="keywords"
-          content="OG Pulse, outbound transparency dashboard, SDR as a service, outbound cell, global outbound teams, multi-industry outbound, South Africa SDR, managed outbound, discovery calls"
+          content="OG Pulse, outbound transparency dashboard, SDR as a service, SDR service, global outbound teams, multi-industry outbound, South Africa SDR, managed outbound, discovery calls"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />

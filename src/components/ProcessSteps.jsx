@@ -26,7 +26,7 @@ export default function ProcessSteps() {
           <div className="bg-white shadow-2xl rounded-3xl border border-slate-200 overflow-hidden">
             <div className="grid lg:grid-cols-12">
               <div className="lg:col-span-7 p-10 lg:p-12 bg-white">
-                <h3 className="text-2xl font-bold text-slate-900">Dedicated Outbound Cell</h3>
+                <h3 className="text-2xl font-bold text-slate-900">Dedicated SDR Service</h3>
                 <p className="text-slate-600 mt-3 text-lg leading-relaxed max-w-2xl">
                   A fully managed, South African-based SDR team embedded in your go-to-market motion.
                 </p>

@@ -9,10 +9,10 @@ export default function SolutionSection() {
   useEffect(() => setIsVisible(true), []);
   const chapters = [
     {
-      title: 'Dedicated SDR Cells: Your Premium Force.',
+      title: 'Dedicated SDR Team: Your Premium Force.',
       subhead: 'A curated, strategic asset embedded in your go-to-market motion.',
       body:
-        'This is not a shared pool or a generic outsourced workforce. Each client cell is staffed with rigorously vetted, South African based talent (native English proficiency, perfect cultural alignment with US/UK buyers). They are meticulously trained for a perfect fit with your specific ICP, tone, and calendar—acting as a seamless, specialized extension of your internal revenue operations team.',
+        'This is not a shared pool or a generic outsourced workforce. Each client SDR team is staffed with rigorously vetted, South African based talent (native English proficiency, perfect cultural alignment with buyers). They are meticulously trained for a perfect fit with your specific ICP, tone, and calendar—acting as a seamless, specialized extension of your internal revenue operations team.',
       bullets: [
         'Continuous Coaching & QA on every call.',
         'Zero hiring, onboarding, or ramp-up burden.',
@@ -27,7 +27,7 @@ export default function SolutionSection() {
       subhead:
         'No setup fees, no software licenses to manage. A powerful, turnkey suite from day one.',
       body:
-        'Eliminate the initial five-figure software investment and two-week configuration timeframe of building a robust outbound tech stack. Your dedicated cell plugs you immediately into our fully optimized omnichannel engine: premium data intelligence for precision list building, advanced multi-channel sequencing, and flawless, real-time CRM synchronization. We assume all management and subscription costs—you simply receive the meetings.',
+        'Eliminate the initial five-figure software investment and two-week configuration timeframe of building a robust outbound tech stack. Your dedicated SDR team plugs you immediately into our fully optimized omnichannel engine: premium data intelligence for precision list building, advanced multi-channel sequencing, and flawless, real-time CRM synchronization. We assume all management and subscription costs—you simply receive the meetings.',
       bullets: [
         'Verified, dynamic target list intelligence.',
         'Native HubSpot / Salesforce integrations.',
@@ -54,7 +54,7 @@ export default function SolutionSection() {
       subhead:
         'A multi-touch blend of call, email, and LinkedIn cadences, rigorously optimized.',
       body:
-        'Outbound success is about operational discipline. Our cells do not execute one-off "blasts." We orchestrate complex, highly disciplined cadences—integrating a blend of 12+ omnichannel touches over a defined period to maximize contact rates. Every campaign features robust A/B testing on subject lines, value propositions, and scripts, executed with a relentless focus on multi-channel follow-up and engagement, not just initial outreach.',
+        'Outbound success is about operational discipline. Our SDR teams do not execute one-off "blasts." We orchestrate complex, highly disciplined cadences—integrating a blend of 12+ omnichannel touches over a defined period to maximize contact rates. Every campaign features robust A/B testing on subject lines, value propositions, and scripts, executed with a relentless focus on multi-channel follow-up and engagement, not just initial outreach.',
       bullets: [
         'Rigorous A/B performance testing.',
         'Omnichannel lead nurture sequences.',
@@ -68,7 +68,7 @@ export default function SolutionSection() {
       subhead:
         'The definitive end of "black-box" agency wondering. Total, unfiltered operational access.',
       body:
-        "We don't hide our work behind monthly PDF reports. We provide OG Pulse, the exact same real-time operations dashboard our dedicated cells use. Log in to your Pulse portal for unfiltered, 24/7 access to all call recordings, email logs, and your definitive Meeting Vault. Verify every lead, review their intent details, and track your historical show-up rates. This level of total transparency guarantees that your monthly investment is always generating the momentum and pipeline you expect.",
+        "We don't hide our work behind monthly PDF reports. We provide OG Pulse, the exact same real-time operations dashboard our dedicated SDR teams use. Log in to your Pulse portal for unfiltered, 24/7 access to all call recordings, email logs, and your definitive Meeting Vault. Verify every lead, review their intent details, and track your historical show-up rates. This level of total transparency guarantees that your monthly investment is always generating the momentum and pipeline you expect.",
       bullets: [
         'Live call and message logs.',
         'Shared access to the high-intent Meeting Vault.',
