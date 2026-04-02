@@ -105,31 +105,21 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
-              <div>
-                <a
-                  href={`mailto:${siteContent.site.email}`}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  {siteContent.site.email}
-                </a>
-              </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">{siteContent.site.phoneUk.label}</span>
                   <a
-                    href={`tel:${siteContent.site.phoneUk.tel}`}
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    href={`mailto:${siteContent.site.email}`}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 break-all"
                   >
-                    {siteContent.site.phoneUk.display}
+                    {siteContent.site.email}
                   </a>
                 </div>
                 <div>
-                  <span className="text-gray-500 text-xs uppercase tracking-wide">{siteContent.site.phoneUs.label}</span>
                   <a
-                    href={`tel:${siteContent.site.phoneUs.tel}`}
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    href={`mailto:${siteContent.site.emailEnquiries}`}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 break-all"
                   >
-                    {siteContent.site.phoneUs.display}
+                    {siteContent.site.emailEnquiries}
                   </a>
                 </div>
               </div>

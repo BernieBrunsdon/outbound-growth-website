@@ -3,17 +3,8 @@
     "title": "Outbound-Growth — Premium SDR Service with Total Transparency",
     "description": "Dedicated South African SDR teams for ambitious growth companies. OG Pulse Transparency Dashboard and a full outbound software suite.",
     "company": "Outbound-Growth",
-    "email": "Enquiries@outbound-growth.com",
-    "phoneUk": {
-      "label": "UK",
-      "display": "+44 20 0000 0000",
-      "tel": "+442000000000"
-    },
-    "phoneUs": {
-      "label": "US",
-      "display": "+1 (555) 000-0000",
-      "tel": "+15550000000"
-    },
+    "email": "admin@outbound-growth.com",
+    "emailEnquiries": "enquiries@outbound-growth.com",
     "location": "Cape Town, South Africa (Remote-first)"
   },
   "appUrl": "https://app.outbound-growth.com",

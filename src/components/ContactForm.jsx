@@ -177,40 +177,24 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <div className="font-semibold text-ink">Email</div>
-                  <a href={`mailto:${siteContent.site.email}`} className="text-primary hover:underline break-all">
-                    {siteContent.site.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                </div>
-                <div className="space-y-3">
-                  <div className="font-semibold text-ink">Phone</div>
-                  <div>
-                    <div className="text-xs font-medium text-muted uppercase tracking-wide mb-0.5">
-                      {siteContent.site.phoneUk.label}
+                  <div className="space-y-1">
+                    <div>
+                      <span className="text-sm text-muted">Admin</span>
+                      <br />
+                      <a href={`mailto:${siteContent.site.email}`} className="text-primary hover:underline break-all">
+                        {siteContent.site.email}
+                      </a>
                     </div>
-                    <a href={`tel:${siteContent.site.phoneUk.tel}`} className="text-primary hover:underline">
-                      {siteContent.site.phoneUk.display}
-                    </a>
-                  </div>
-                  <div>
-                    <div className="text-xs font-medium text-muted uppercase tracking-wide mb-0.5">
-                      {siteContent.site.phoneUs.label}
+                    <div>
+                      <span className="text-sm text-muted">Enquiries</span>
+                      <br />
+                      <a
+                        href={`mailto:${siteContent.site.emailEnquiries}`}
+                        className="text-primary hover:underline break-all"
+                      >
+                        {siteContent.site.emailEnquiries}
+                      </a>
                     </div>
-                    <a href={`tel:${siteContent.site.phoneUs.tel}`} className="text-primary hover:underline">
-                      {siteContent.site.phoneUs.display}
-                    </a>
                   </div>
                 </div>
               </div>
