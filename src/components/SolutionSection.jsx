@@ -102,7 +102,7 @@ export default function SolutionSection() {
         {chapters.map((chapter, index) => (
           <section
             key={chapter.title}
-            className={`relative min-h-screen py-24 ${
+            className={`relative min-h-screen py-16 md:py-20 ${
               index % 2 === 0 ? 'bg-white/85' : 'bg-slate-50/85'
             } backdrop-blur-[1px]`}
           >

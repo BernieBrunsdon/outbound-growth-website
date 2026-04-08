@@ -11,7 +11,16 @@ const nextConfig = {
       }
     : {}),
   images: {
-    domains: ['images.unsplash.com', 'logo.clearbit.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'logo.clearbit.com',
+      },
+    ],
     unoptimized: isStaticPreview,
   },
   async rewrites() {
