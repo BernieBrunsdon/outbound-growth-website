@@ -1,25 +1,21 @@
+import emailjs from 'emailjs-com';
+
+const SERVICE_ID = 'service_7ldexr4';
+const TEMPLATE_ID = 'template_uqw2nqh';
+
 /**
- * POST /api/contact — shared by page form and Book a demo modal.
+ * Send contact / discovery lead via EmailJS (client-side only).
+ * Requires `emailjs.init(publicKey)` to have run (see `pages/_app.js`).
+ * Template variables: name, email, phone, company, message
  */
-export async function submitContactLead({
-  name,
-  email,
-  company,
-  message,
-  type = 'discovery_request',
-  service = 'Book a demo / discovery request',
-}) {
-  return fetch('/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name,
-      email,
-      company,
-      service,
-      message,
-      type,
-      bookConsultation: false,
-    }),
-  });
+export async function submitContactLead({ name, email, phone, company, message }) {
+  const templateParams = {
+    name,
+    email,
+    phone: phone ?? '',
+    company,
+    message,
+  };
+
+  return emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
 }

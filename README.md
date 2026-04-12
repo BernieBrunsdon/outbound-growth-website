@@ -8,7 +8,7 @@ A modern, responsive website for Outbound-Growth - Premium Sales Outsourcing & C
 - 📱 **Fully Responsive**: Optimized for all device sizes
 - ⚡ **Fast Performance**: Built with Next.js for optimal speed
 - 🔧 **Easy Content Management**: JSON-based content system
-- 📧 **Contact Form**: Functional contact form with email notifications
+- 📧 **Contact Form**: Client-side submissions via [EmailJS](https://www.emailjs.com/)
 - 🔒 **Admin Panel**: Simple admin interface for managing submissions
 - 🐳 **Docker Ready**: Complete Docker setup for easy deployment
 - ♿ **Accessible**: WCAG compliant with keyboard navigation
@@ -19,7 +19,7 @@ A modern, responsive website for Outbound-Growth - Premium Sales Outsourcing & C
 - **Framework**: Next.js 14
 - **Styling**: Tailwind CSS
 - **Language**: JavaScript
-- **Email**: Nodemailer
+- **Email**: EmailJS (`emailjs-com`)
 - **Deployment**: Docker
 
 ## Quick Start
@@ -44,10 +44,6 @@ A modern, responsive website for Outbound-Growth - Premium Sales Outsourcing & C
    Edit `.env` with your configuration:
    ```env
    PORT=3000
-   SMTP_HOST=your-smtp-host
-   SMTP_PORT=587
-   SMTP_USER=your-email
-   SMTP_PASS=your-password
    WEBHOOK_URL=your-webhook-url
    NEXT_PUBLIC_ADMIN_PASS=your-admin-password
    ```
@@ -114,16 +110,14 @@ All website content is stored in `content/site.json`. To update content:
 ## Admin Panel
 
 Access the admin panel at `/admin` to:
-- View contact form submissions
+- View contact submissions that were stored via Firebase (legacy) or local `data/contacts.json`
 - Export data as CSV
-- Manage form data
 
-Default admin password is set in `NEXT_PUBLIC_ADMIN_PASS` environment variable.
+New submissions use **EmailJS** in the browser and are **not** written to Firestore by this app. Default admin password is set in `NEXT_PUBLIC_ADMIN_PASS`.
 
 ## API Endpoints
 
-- `POST /api/contact` - Submit contact form
-- `GET /api/admin/contacts` - Get contact submissions (admin)
+- `GET /api/admin/contacts` - Get contact submissions (admin; Firebase or local file only)
 - `GET /api/sitemap` - Generate sitemap.xml
 - `GET /sitemap.xml` - Sitemap for search engines
 
@@ -132,17 +126,13 @@ Default admin password is set in `NEXT_PUBLIC_ADMIN_PASS` environment variable.
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PORT` | Server port | No (default: 3000) |
-| `SMTP_HOST` | SMTP server for emails | No |
-| `SMTP_PORT` | SMTP port | No (default: 587) |
-| `SMTP_USER` | SMTP username | No |
-| `SMTP_PASS` | SMTP password | No |
-| `WEBHOOK_URL` | Webhook for form submissions | No |
+| `WEBHOOK_URL` | Optional server webhook (unused by default contact flow) | No |
 | `NEXT_PUBLIC_ADMIN_PASS` | Admin panel password | Yes |
 | `FIREBASE_PROJECT_ID` | Firebase project ID for Firestore | No* |
 | `FIREBASE_CLIENT_EMAIL` | Firebase service account client email | No* |
 | `FIREBASE_PRIVATE_KEY` | Firebase service account private key | No* |
 
-\* If omitted, contact submissions fall back to local `data/contacts.json` storage.
+\* If Firebase is omitted, the admin panel reads local `data/contacts.json` if present. The live contact form sends through **EmailJS**; configure service, template, and public key in `src/lib/contactSubmit.js` and `src/pages/_app.js`.
 
 ### Firebase setup (optional, recommended for production)
 
@@ -175,7 +165,6 @@ outbound-growth/
 │   │   └── CookieBanner.jsx
 │   ├── pages/
 │   │   ├── api/
-│   │   │   ├── contact.js
 │   │   │   ├── admin/
 │   │   │   │   └── contacts.js
 │   │   │   └── sitemap.js
@@ -251,15 +240,9 @@ The application can be deployed to any platform that supports Node.js:
 - Add HubSpot tracking code to `src/components/Layout.jsx`
 - Update contact form to send data to HubSpot API
 
-### Email Configuration
+### Email (EmailJS)
 
-Configure SMTP settings in `.env`:
-```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-```
+The contact form and “Book a discovery call” modal send mail through **EmailJS** from the browser. Adjust **public key** (in `src/pages/_app.js`), **service ID**, and **template ID** (in `src/lib/contactSubmit.js`) to match your EmailJS dashboard. Template parameters: `name`, `email`, `phone`, `company`, `message`.
 
 ## Support
 

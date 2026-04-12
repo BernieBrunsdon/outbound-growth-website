@@ -29,23 +29,15 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-28">
+        <div className="flex justify-between items-center h-24 md:h-28">
           <Link
             href="/"
-            className="flex items-center shrink-0 rounded-xl focus-visible:outline-none -my-1 py-1"
+            className="flex items-center shrink-0 rounded-xl focus-visible:outline-none"
           >
             <img
               src="/images/Title (4).png"
               alt="Outbound-Growth Logo"
-              style={{
-                height: '120px',
-                width: 'auto',
-                objectFit: 'contain',
-                display: 'block',
-                transform: 'scale(2.5)',
-                transformOrigin: 'left center',
-                marginTop: '28px',
-              }}
+              className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain block"
               onError={(e) => {
                 e.target.src = '/images/logo.png';
               }}

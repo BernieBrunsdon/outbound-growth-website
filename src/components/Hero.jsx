@@ -13,7 +13,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="bg-white pt-32 lg:pt-28 pb-24 lg:pb-32">
+    <section id="hero" className="bg-white pt-28 md:pt-32 lg:pt-28 pb-24 lg:pb-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <div className={`space-y-8 ${isVisible ? 'fade-in' : 'opacity-0'}`}>

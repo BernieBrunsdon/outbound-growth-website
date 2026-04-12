@@ -1,7 +1,7 @@
 # Render Blueprint — marketing site (Next.js)
 # Apply: Dashboard → Blueprints → New Blueprint Instance → select this repo
 # After deploy: Environment (secrets below), Custom Domains.
-# Optional later in Dashboard: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, WEBHOOK_URL (see env.example).
+# Contact form uses EmailJS in the browser (no server mail env vars).
 
 services:
   - type: web
@@ -22,7 +22,7 @@ services:
       # Required for /admin client-side gate (set in Dashboard)
       - key: NEXT_PUBLIC_ADMIN_PASS
         sync: false
-      # Firestore contact form (set in Dashboard)
+      # Optional: admin panel reads historical Firestore submissions (EmailJS does not write here)
       - key: FIREBASE_PROJECT_ID
         sync: false
       - key: FIREBASE_CLIENT_EMAIL

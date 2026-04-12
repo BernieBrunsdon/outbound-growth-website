@@ -6,6 +6,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     message: '',
   });
@@ -23,23 +24,21 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      const response = await submitContactLead({
-        ...formData,
-        type: 'contact_section',
-        service: 'Contact form (page footer)',
+      await submitContactLead({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message,
       });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus('error');
-      }
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+      });
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
@@ -116,6 +115,22 @@ export default function ContactForm() {
                     placeholder="your@email.com"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-ink mb-2">
+                  Phone *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="+27 … or your best number"
+                />
               </div>
 
               <div>

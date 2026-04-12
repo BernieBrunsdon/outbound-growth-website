@@ -5,6 +5,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     message: '',
   });
@@ -23,7 +24,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
   useEffect(() => {
     if (!isOpen) {
       setSubmitStatus(null);
-      setFormData({ name: '', email: '', company: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     }
   }, [isOpen]);
 
@@ -37,17 +38,15 @@ export default function BookDemoModal({ isOpen, onClose }) {
     setIsSubmitting(true);
     setSubmitStatus(null);
     try {
-      const response = await submitContactLead({
-        ...formData,
-        type: 'discovery_request',
-        service: 'Book a Discovery Call (site CTA)',
+      await submitContactLead({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message,
       });
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', company: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (err) {
       console.error(err);
       setSubmitStatus('error');
@@ -130,6 +129,21 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="you@company.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="modal-phone" className="block text-sm font-medium text-ink mb-1">
+                Phone *
+              </label>
+              <input
+                id="modal-phone"
+                name="phone"
+                type="tel"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="+27 … or your best number"
               />
             </div>
             <div>
