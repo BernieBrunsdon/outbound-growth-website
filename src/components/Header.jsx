@@ -35,7 +35,7 @@ export default function Header() {
             className="flex items-center shrink-0 rounded-xl focus-visible:outline-none"
           >
             <img
-              src="/images/Title (4).png"
+              src="/images/logo.svg"
               alt="Outbound-Growth Logo"
               className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain block"
               onError={(e) => {
