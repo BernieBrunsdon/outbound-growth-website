@@ -7,7 +7,8 @@ export default function ProcessSteps() {
   useEffect(() => setIsVisible(true), []);
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
+    <section id="process" className="py-24 bg-slate-50">
+      <div id="pricing" aria-hidden="true" className="relative -top-24" />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`text-center ${isVisible ? 'fade-in' : 'opacity-0'}`}>
           <div className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Pricing</div>
