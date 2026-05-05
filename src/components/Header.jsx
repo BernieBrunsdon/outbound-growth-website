@@ -18,7 +18,6 @@ export default function Header() {
     { name: 'Solution', href: '#solution' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Why SA', href: '#why-sa' },
-    { name: 'Clients', href: '#clients' },
     { name: 'Contact', href: '#contact' },
   ];
 
