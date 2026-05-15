@@ -2,7 +2,6 @@ import Hero from '../components/Hero';
 import SolutionSection from '../components/SolutionSection';
 import ProcessSteps from '../components/ProcessSteps';
 import WhySouthAfrica from '../components/WhySouthAfrica';
-import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <SolutionSection />
       <ProcessSteps />
       <WhySouthAfrica />
-      <Testimonials />
       <ContactForm />
     </>
   );

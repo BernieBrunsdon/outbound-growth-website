@@ -124,21 +124,5 @@
       }
     ]
   },
-  "finalCta": {},
-  "testimonials": [
-    {
-      "quote": "Outbound-Growth gave us a reliable outbound rhythm. Their SDRs sounded like part of our team and kept our AE calendar busy with real conversations.",
-      "author": "Client partner",
-      "title": "VP Sales",
-      "initials": "VP",
-      "color": "#0B63D6"
-    },
-    {
-      "quote": "We did not want to hire and train SDRs in London. The South Africa team integrated into HubSpot and Slack quickly; The OG Pulse Transparency Dashboard made oversight straightforward.",
-      "author": "Client partner",
-      "title": "Head of Growth",
-      "initials": "HG",
-      "color": "#06A77D"
-    }
-  ]
+  "finalCta": {}
 }
