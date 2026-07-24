@@ -15,21 +15,22 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative z-40 bg-white border-b border-slate-100">
+    <header className="relative z-40 bg-white border-b border-slate-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center gap-4 h-20 sm:h-24 md:h-28">
+        <div className="flex justify-between items-center gap-4 h-14 md:h-16">
           <Link
             href="/"
-            className="flex h-full items-center shrink-0 overflow-visible focus-visible:outline-none rounded-xl"
+            className="flex items-center shrink-0 focus-visible:outline-none"
+            style={{ height: 40, maxWidth: 160 }}
           >
             <img
               src="/images/logo-cropped.png"
               alt="Outbound-Growth Logo"
-              className="h-full w-auto max-w-[min(72vw,28rem)] object-contain object-left origin-left scale-[1.45] sm:scale-[1.5] md:scale-[1.55] block"
+              width={160}
+              height={40}
+              style={{ height: 40, width: 'auto', maxWidth: 160, display: 'block', objectFit: 'contain' }}
               onError={(e) => {
                 e.target.src = '/images/logo.svg';
-                e.target.className =
-                  'h-full w-auto max-w-[14rem] object-contain object-left block';
               }}
             />
           </Link>
