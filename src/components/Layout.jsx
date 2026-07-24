@@ -17,12 +17,6 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" 
-          rel="stylesheet" 
-        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
@@ -31,11 +25,9 @@ export default function Layout({ children }) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Head>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-bg">
         <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </div>
     </>

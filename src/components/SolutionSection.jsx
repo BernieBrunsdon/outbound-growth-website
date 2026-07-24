@@ -1,124 +1,126 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useBookDemoModal } from '../context/BookDemoModalContext';
 import { CLIENT_APP_URL } from '../lib/appUrl';
+import siteContent from '../../content/site.json';
+
+const CHAPTER_IMAGES = [
+  '/images/og-pulse-multidevice-preview.png',
+  '/images/og-pulse-solution-showcase.png',
+  '/images/og-pulse-dashboard-preview.png',
+  '/images/og-pulse-multidevice-preview.png',
+  '/images/og-pulse-app-real.png',
+];
 
 export default function SolutionSection() {
   const { openModal } = useBookDemoModal();
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => setIsVisible(true), []);
+  const solution = siteContent.solution;
+
   const chapters = [
     {
-      title: 'Dedicated SDR Team: Your Premium Force.',
-      subhead: 'A curated, strategic asset embedded in your go-to-market motion.',
+      title: 'Dedicated SDR team',
+      subhead: 'Embedded in your motion—not a shared pool.',
       body:
-        'This is not a shared pool or a generic outsourced workforce. Each client SDR team is staffed with rigorously vetted, South African based talent (native English proficiency, perfect cultural alignment with buyers). They are meticulously trained for a perfect fit with your specific ICP, tone, and calendar—acting as a seamless, specialized extension of your internal revenue operations team.',
+        'Each seat is staffed with vetted, South Africa–based talent: native English, trained on your ICP, tone, and calendar. Continuous coaching and QA sit with us so you are not hiring, ramping, or managing headcount.',
       bullets: [
-        'Continuous Coaching & QA on every call.',
-        'Zero hiring, onboarding, or ramp-up burden.',
-        'High-level consultative strategic support included.',
+        'Coaching and QA on live work',
+        'No hiring or ramp burden on your side',
+        'Strategy support included with the seat',
       ],
       reverse: false,
-      ctaLabel: 'View our SDR selection process',
+      ctaLabel: 'Talk through SDR fit',
       ctaType: 'modal',
+      imageAlt: 'OG Pulse on multiple devices',
     },
     {
-      title: 'Integrated Data & Technology Stack: Immediate Force Multiplication.',
-      subhead:
-        'No setup fees, no software licenses to manage. A powerful, turnkey suite from day one.',
+      title: 'Stack included',
+      subhead: 'No setup fees. No separate software chase.',
       body:
-        'Eliminate the initial five-figure software investment and two-week configuration timeframe of building a robust outbound tech stack. Your dedicated SDR team plugs you immediately into our fully optimized omnichannel engine: premium data intelligence for precision list building, advanced multi-channel sequencing, and flawless, real-time CRM synchronization. We assume all management and subscription costs—you simply receive the meetings.',
+        'Your team plugs into our outbound engine—data, sequencing, and CRM sync—without a five-figure tool bill or a two-week config project. We carry subscription and ops cost; you get meetings.',
       bullets: [
-        'Verified, dynamic target list intelligence.',
-        'Native HubSpot / Salesforce integrations.',
-        'Fully optimized multi-channel orchestration.',
+        'Target list intelligence',
+        'HubSpot / Salesforce integrations',
+        'Multi-channel sequences managed for you',
       ],
       reverse: true,
       ctaLabel: null,
+      imageAlt: 'Outbound stack and workflow showcase',
     },
     {
-      title: 'Strategic Market Targeting: Precision Over Volume.',
-      subhead: 'Data-driven ideal client profile definition and account list intelligence.',
+      title: 'Targeting that converts',
+      subhead: 'ICP and lists built for buyers who close.',
       body:
-        "Moving beyond basic keywords, we execute a sophisticated market intelligence analysis to build dynamic, high-intent target account lists. Our approach is strictly outcomes-focused, implementing persona-based messaging feedback loops that continuously test which titles and companies convert. This rigorous, iterative process ensures we are pursuing the buyers who actually buy in your category, maximizing every conversation's value.",
+        'We define firmographics, roles, and triggers, then build and refresh account lists. Messaging is tested against titles and segments that actually convert in your category—not volume for its own sake.',
       bullets: [
-        'Deep ICP-to-market fit alignment.',
-        'Persona-based message testing.',
-        'Strategic market segment feedback loops.',
+        'ICP aligned to market fit',
+        'Persona-based message tests',
+        'Feedback loops into the next list',
       ],
       reverse: false,
       ctaLabel: null,
+      imageAlt: 'OG Pulse dashboard targeting view',
     },
     {
-      title: 'Disciplined Omnichannel Execution: Proven Momentum.',
-      subhead:
-        'A multi-touch blend of call, email, and LinkedIn cadences, rigorously optimized.',
+      title: 'Daily omnichannel execution',
+      subhead: 'Call, email, and LinkedIn—with follow-through.',
       body:
-        'Outbound success is about operational discipline. Our SDR teams do not execute one-off "blasts." We orchestrate complex, highly disciplined cadences—integrating a blend of 12+ omnichannel touches over a defined period to maximize contact rates. Every campaign features robust A/B testing on subject lines, value propositions, and scripts, executed with a relentless focus on multi-channel follow-up and engagement, not just initial outreach.',
+        'Cadences run across channels with disciplined follow-up. We test subject lines, value props, and scripts, then keep pressure on engagement—not one-off blasts.',
       bullets: [
-        'Rigorous A/B performance testing.',
-        'Omnichannel lead nurture sequences.',
-        'Relentless follow-up and objection handling discipline.',
+        'A/B testing on live campaigns',
+        'Multi-touch nurture sequences',
+        'Objection handling and follow-up cadence',
       ],
       reverse: true,
       ctaLabel: null,
+      imageAlt: 'Campaign activity across devices',
     },
     {
-      title: 'OG Pulse: The Transparency Engine.',
-      subhead:
-        'The definitive end of "black-box" agency wondering. Total, unfiltered operational access.',
+      title: 'OG Pulse',
+      subhead: 'The same ops dashboard our SDRs use.',
       body:
-        "We don't hide our work behind monthly PDF reports. We provide OG Pulse, the exact same real-time operations dashboard our dedicated SDR teams use. Log in to your Pulse portal for unfiltered, 24/7 access to all call recordings, email logs, and your definitive Meeting Vault. Verify every lead, review their intent details, and track your historical show-up rates. This level of total transparency guarantees that your monthly investment is always generating the momentum and pipeline you expect.",
+        'Skip the black-box PDF. Log into Pulse for call recordings, email logs, and the Meeting Vault—24/7. Check intent notes and show-up history whenever you want proof the work is happening.',
       bullets: [
-        'Live call and message logs.',
-        'Shared access to the high-intent Meeting Vault.',
-        'Tracked and optimized Meeting Show-Up Rates.',
+        'Live call and message logs',
+        'Meeting Vault with context',
+        'Show-up visibility over time',
       ],
       reverse: false,
-      ctaLabel: 'See a sample Meeting Vault',
+      ctaLabel: 'Open sample Meeting Vault',
       ctaType: 'app',
+      imageAlt: 'OG Pulse application screenshot',
     },
   ];
 
   return (
-    <section id="solution" className="relative isolate">
-      <div
-        className="absolute inset-0 pointer-events-none bg-[url('/images/solutions-bg-texture.png')] bg-cover bg-center bg-fixed mix-blend-multiply"
-        style={{ opacity: 0.15 }}
-        aria-hidden
-      />
-
+    <section id="solution" className="relative isolate bg-bg">
       <div className="relative">
-        <div className={`text-center py-20 px-6 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-          <div className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Our solution</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-ink mb-6 max-w-5xl mx-auto">
-            A Premium, Transparent Outbound System Built For Scale
+        <div className="text-left md:text-center py-16 md:py-20 px-6 max-w-4xl mx-auto">
+          <div className="text-section-label">{solution.label}</div>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold text-ink mb-4 leading-tight">
+            {solution.title}
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
-            Scroll through each chapter to see exactly how your outbound engine is built and operated.
-          </p>
+          <p className="text-lg md:text-xl text-muted leading-relaxed">{solution.subtitle}</p>
         </div>
 
         {chapters.map((chapter, index) => (
           <section
             key={chapter.title}
-            className={`relative min-h-screen py-16 md:py-20 ${
-              index % 2 === 0 ? 'bg-white/85' : 'bg-slate-50/85'
-            } backdrop-blur-[1px]`}
+            className={`py-14 md:py-20 ${index % 2 === 0 ? 'bg-surface' : 'bg-bg'}`}
           >
-            <div className="container mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-              <div className={`md:col-span-7 ${chapter.reverse ? 'md:order-2' : ''}`}>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-6">
-                  Chapter {index + 1}
-                </div>
-                <h2 className="text-3xl md:text-5xl font-bold text-ink leading-tight mb-6">{chapter.title}</h2>
-                <h4 className="text-xl md:text-2xl font-semibold text-primary mb-6">{chapter.subhead}</h4>
-                <p className="text-lg text-muted leading-relaxed mb-8">{chapter.body}</p>
-                <ul className="space-y-4 mb-10">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+              <div className={`md:col-span-6 ${chapter.reverse ? 'md:order-2' : ''}`}>
+                <p className="text-sm font-semibold text-muted mb-3 tabular-nums">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <h3 className="font-display text-2xl md:text-4xl font-semibold text-ink leading-tight mb-3">
+                  {chapter.title}
+                </h3>
+                <p className="text-lg font-medium text-primary mb-4">{chapter.subhead}</p>
+                <p className="text-base md:text-lg text-muted leading-relaxed mb-6">{chapter.body}</p>
+                <ul className="space-y-3 mb-8">
                   {chapter.bullets.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-ink">
-                      <span className="mt-1.5 w-2.5 h-2.5 rounded-full bg-accent flex-shrink-0" aria-hidden />
-                      <span className="text-base md:text-lg font-medium">{item}</span>
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden />
+                      <span className="text-base font-medium leading-snug">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -127,7 +129,7 @@ export default function SolutionSection() {
                   <button
                     type="button"
                     onClick={() => openModal()}
-                    className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 btn-hover shadow-lg"
+                    className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
                   >
                     {chapter.ctaLabel}
                   </button>
@@ -138,56 +140,23 @@ export default function SolutionSection() {
                     href={CLIENT_APP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-all duration-200 btn-hover shadow-lg"
+                    className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200"
                   >
                     {chapter.ctaLabel}
                   </a>
                 ) : null}
               </div>
 
-              <div className={`md:col-span-5 ${chapter.reverse ? 'md:order-1' : ''}`}>
-                {index === 4 ? (
-                  <div className="relative rounded-3xl border border-gray-100 bg-white shadow-2xl p-4 md:p-5 overflow-hidden">
-                    <Image
-                      src="/images/og-pulse-app-real.png"
-                      alt="Actual OG Pulse app screenshot"
-                      width={1280}
-                      height={896}
-                      className="w-full h-auto rounded-2xl object-cover"
-                    />
-                  </div>
-                ) : (
-                  <div className="relative rounded-3xl border border-gray-100 bg-white shadow-2xl p-10 md:p-12">
-                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent/80" aria-hidden />
-                    <div className="absolute -bottom-3 -left-3 w-6 h-6 rounded-full bg-primary/80" aria-hidden />
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-8">
-                      {index === 0 && (
-                        <svg className="w-10 h-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M17 20h5V4h-5m-5 16h5V10h-5m-5 10h5V14H7m-5 6h5V8H2" />
-                        </svg>
-                      )}
-                      {index === 1 && (
-                        <svg className="w-10 h-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 6h16M4 12h16M4 18h16M8 4v16M16 4v16" />
-                        </svg>
-                      )}
-                      {index === 2 && (
-                        <svg className="w-10 h-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 19h16M4 5h8v6H4zM14 9h6M14 13h6M4 15h8" />
-                        </svg>
-                      )}
-                      {index === 3 && (
-                        <svg className="w-10 h-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M8 7h8M6 12h12M9 17h6M4 5h2v2H4zM18 5h2v2h-2zM4 10h2v2H4zM18 10h2v2h-2zM4 15h2v2H4zM18 15h2v2h-2z" />
-                        </svg>
-                      )}
-                    </div>
-                    <h3 className="text-2xl font-bold text-ink mb-4">{chapter.title}</h3>
-                    <p className="text-muted leading-relaxed">
-                      Premium execution architecture with measurable operational visibility at every stage.
-                    </p>
-                  </div>
-                )}
+              <div className={`md:col-span-6 ${chapter.reverse ? 'md:order-1' : ''}`}>
+                <div className="relative overflow-hidden border border-slate-200/80 bg-white">
+                  <Image
+                    src={CHAPTER_IMAGES[index]}
+                    alt={chapter.imageAlt}
+                    width={1280}
+                    height={800}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
               </div>
             </div>
           </section>

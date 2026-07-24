@@ -11,39 +11,34 @@ module.exports = {
         primary: '#0B63D6',
         accent: '#06A77D',
         ink: '#0F1724',
-        muted: '#6B7280',
-        bg: '#FFFFFF',
+        muted: '#5B6472',
+        bg: '#F7F8FA',
+        surface: '#FFFFFF',
       },
       borderRadius: {
-        custom: '12px',
+        custom: '10px',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        display: ['Sora', 'system-ui', 'sans-serif'],
       },
       fontWeight: {
         regular: '400',
         semibold: '600',
-        bold: '800',
-      },
-      spacing: {
-        8: '8px',
-        16: '16px',
-        24: '24px',
-        32: '32px',
-        48: '48px',
+        bold: '700',
       },
       animation: {
-        'fade-in': 'fadeIn 0.35s ease-out',
-        'scale-hover': 'scaleHover 0.2s ease-out',
+        'hero-rise': 'heroRise 0.7s ease-out both',
+        'hero-fade': 'heroFade 0.9s ease-out 0.15s both',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
+        heroRise: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        scaleHover: {
-          '0%': { transform: 'scale(1)' },
-          '100%': { transform: 'scale(1.03)' },
+        heroFade: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
     },

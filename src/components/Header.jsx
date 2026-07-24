@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { CLIENT_APP_URL } from '../lib/appUrl';
 import { useBookDemoModal } from '../context/BookDemoModalContext';
@@ -6,13 +6,6 @@ import { useBookDemoModal } from '../context/BookDemoModalContext';
 export default function Header() {
   const { openModal } = useBookDemoModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { name: 'Solution', href: '#solution' },
@@ -22,23 +15,21 @@ export default function Header() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}
-    >
+    <header className="relative z-40 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24 md:h-28">
+        <div className="flex justify-between items-center gap-4 h-20 sm:h-24 md:h-28">
           <Link
             href="/"
-            className="flex items-center shrink-0 rounded-xl focus-visible:outline-none"
+            className="flex h-full items-center shrink-0 overflow-visible focus-visible:outline-none rounded-xl"
           >
             <img
               src="/images/logo-cropped.png"
               alt="Outbound-Growth Logo"
-              className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain block"
+              className="h-full w-auto max-w-[min(72vw,28rem)] object-contain object-left origin-left scale-[1.45] sm:scale-[1.5] md:scale-[1.55] block"
               onError={(e) => {
-                e.target.src = '/images/logo.png';
+                e.target.src = '/images/logo.svg';
+                e.target.className =
+                  'h-full w-auto max-w-[14rem] object-contain object-left block';
               }}
             />
           </Link>
@@ -48,7 +39,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
+                className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-sm rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
               >
                 {item.name}
               </Link>
@@ -60,14 +51,14 @@ export default function Header() {
               href={CLIENT_APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-xs uppercase tracking-wide whitespace-nowrap rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
+              className="text-ink hover:text-primary transition-colors duration-200 font-semibold text-sm whitespace-nowrap rounded-md px-1 -mx-1 py-0.5 focus-visible:outline-none"
             >
               Client Login
             </a>
             <button
               type="button"
               onClick={() => openModal()}
-              className="bg-primary text-white px-5 py-2 rounded-lg font-semibold text-xs uppercase tracking-wide hover:bg-blue-700 transition-all duration-200 btn-hover shadow-md whitespace-nowrap focus-visible:outline-none"
+              className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap focus-visible:outline-none"
             >
               Book a Discovery Call
             </button>
@@ -95,7 +86,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide focus-visible:outline-none"
+                  className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm focus-visible:outline-none"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -105,7 +96,7 @@ export default function Header() {
                 href={CLIENT_APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm uppercase tracking-wide focus-visible:outline-none"
+                className="block px-4 py-3 text-ink hover:text-primary hover:bg-gray-50 rounded-lg font-semibold text-sm focus-visible:outline-none"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Client Login
@@ -117,7 +108,7 @@ export default function Header() {
                     setIsMenuOpen(false);
                     openModal();
                   }}
-                  className="block w-full bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wide text-center hover:bg-blue-700 transition-all duration-200 shadow-lg focus-visible:outline-none"
+                  className="block w-full bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-sm text-center hover:bg-blue-700 transition-colors duration-200 focus-visible:outline-none"
                 >
                   Book a Discovery Call
                 </button>

@@ -69,11 +69,11 @@ export default function BookDemoModal({ isOpen, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="book-demo-modal-title"
-        className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-gray-100"
+        className="bg-white rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-slate-200"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 flex items-center justify-between gap-4 px-6 py-4 border-b border-gray-100 bg-white rounded-t-2xl">
-          <h2 id="book-demo-modal-title" className="text-xl font-bold text-ink">
+        <div className="sticky top-0 flex items-center justify-between gap-4 px-6 py-4 border-b border-slate-100 bg-white rounded-t-xl">
+          <h2 id="book-demo-modal-title" className="font-display text-xl font-semibold text-ink">
             Book a Discovery Call
           </h2>
           <button

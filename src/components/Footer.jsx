@@ -6,10 +6,9 @@ import { CLIENT_APP_URL } from '../lib/appUrl';
 
 export default function Footer() {
   const quickLinks = [
-    { name: 'How it works', href: '#process' },
+    { name: 'How we work', href: '#solution' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Why South Africa', href: '#why-sa' },
-    { name: 'Clients', href: '#clients' },
-    { name: 'Book a call', href: '#contact' },
     { name: 'Contact', href: '#contact' },
     {
       name: 'Client Login',
@@ -48,14 +47,14 @@ export default function Footer() {
               </div>
               <div className="text-sm text-gray-300">
                 <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                  Premium SDR Service · OG Pulse · Multi-Industry
+                  South African SDRs · OG Pulse · Managed outbound
                 </AppLinkText>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                Dedicated South African SDR experts with The OG Pulse Transparency Dashboard—research, outreach
-                execution, qualification, and meetings on your calendar across multiple industries.
+                Dedicated South African SDR seats with OG Pulse—research, outreach, qualification, and meetings on your
+                calendar.
               </AppLinkText>
             </p>
             <div className="flex space-x-4">

@@ -1,0 +1,13 @@
+---
+description: Apply Outbound-Growth brand skill for all marketing UI and copy changes
+globs: src/components/**/*.{jsx,js,tsx,ts},src/styles/**/*.css,content/**/*.json,tailwind.config.js
+alwaysApply: false
+---
+
+# Marketing UI
+
+When editing the Outbound-Growth marketing website UI or copy, follow the project skill:
+
+`.cursor/skills/outbound-growth-brand/SKILL.md`
+
+Do not reintroduce Inter, pill badges, icon-placeholder feature cards, purple accents, or stock “Premium / Elite / Transform” B2B phrasing.

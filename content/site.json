@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Outbound-Growth — Premium SDR Service with Total Transparency",
-    "description": "Dedicated South African SDR teams for ambitious growth companies. OG Pulse Transparency Dashboard and a full outbound software suite.",
+    "title": "Outbound-Growth — Dedicated South African SDRs with OG Pulse",
+    "description": "Dedicated South African SDR teams for growth companies. Full outbound stack included, with live visibility in OG Pulse.",
     "company": "Outbound-Growth",
     "email": "admin@outbound-growth.com",
     "emailEnquiries": "enquiries@outbound-growth.com",
@@ -9,25 +9,25 @@
   },
   "appUrl": "https://app.outbound-growth.com",
   "hero": {
-    "headline": "High-Performance Outbound for Growth-Focused Teams. Powered by Total Transparency.",
-    "subheadline": "Scale your pipeline with dedicated South African SDR teams at a 60% lower cost-per-meeting. Eliminate the 'Black Box' with our real-time tracking engine.",
+    "headline": "South African SDRs. Live pipeline visibility. Flat monthly cost.",
+    "subheadline": "Dedicated reps for your ICP, full outbound stack included, and OG Pulse so you can see every call, email, and meeting—not a monthly PDF.",
     "bullets": [
-      "Dedicated Human Experts",
-      "OG Pulse Real-Time Dashboard",
-      "Full Tech Stack Included"
+      "Dedicated human SDRs",
+      "OG Pulse real-time dashboard",
+      "Full tech stack included"
     ],
     "primary_cta": {
       "label": "Book a Discovery Call"
     },
     "secondary_cta": {
       "label": "See How It Works",
-      "href": "#process"
+      "href": "#solution"
     }
   },
   "solution": {
-    "label": "Our solution",
-    "title": "SDR-as-a-Service, Fully Transparent.",
-    "subtitle": "A premium SDR service—not a black-box agency. ROI-first execution with an open-book view of pipeline creation for teams across multiple sectors.",
+    "label": "How we work",
+    "title": "Managed outbound you can actually inspect.",
+    "subtitle": "Dedicated SDRs, the stack, the cadence, and OG Pulse—so pipeline creation is visible every day, not after the invoice.",
     "points": [
       {
         "title": "Dedicated SDRs",
@@ -35,26 +35,26 @@
       },
       {
         "title": "Full stack included",
-        "description": "We run a full outbound software suite with our own systems and tools, so your campaigns stay fast, consistent, and fully managed."
+        "description": "We run outbound software with our own systems and tools, so campaigns stay consistent without you buying seats twice."
       },
       {
         "title": "Prospecting strategy",
-        "description": "ICP definition, list building, and message testing aimed at buyers who actually close in your category."
+        "description": "ICP definition, list building, and message testing aimed at buyers who close in your category."
       },
       {
         "title": "Campaign management",
         "description": "Daily execution, follow-up discipline, and iteration on what converts—not one-off blasts."
       },
       {
-        "title": "OG Pulse Monitoring",
-        "description": "Total visibility into the engine. Access live call recordings and logs in The OG Pulse Transparency Dashboard so you never have to wonder if the work is being done."
+        "title": "OG Pulse",
+        "description": "Live call recordings, message logs, and the Meeting Vault in the same dashboard our teams use."
       }
     ]
   },
   "process": {
     "label": "How it works",
     "title": "From ICP to meetings on your calendar",
-    "subtitle": "The hybrid model: combining elite human communication with smart research workflows for maximum efficiency—so you always know what happens next.",
+    "subtitle": "Clear stages from targeting to booked meetings—so you always know what happens next.",
     "steps": [
       {
         "title": "Define your ideal customer profile",
@@ -80,8 +80,8 @@
   },
   "services": {
     "label": "What we run",
-    "title": "Outbound execution your SDR team owns",
-    "subtitle": "Everything before the demo: research, outreach, qualification, and handoff—inside your stack where you want it.",
+    "title": "Outbound execution your SDR owns",
+    "subtitle": "Research, outreach, qualification, and handoff—before the demo, inside your stack where you want it.",
     "activities": [
       "Lead and account research",
       "List building",
@@ -92,34 +92,34 @@
       "Meeting booking into your calendar",
       "The OG Pulse Transparency Dashboard"
     ],
-    "closingLine": "Software, management, and HR sit with us—you get a managed seat, The OG Pulse Transparency Dashboard, and full visibility into meetings booked.",
+    "closingLine": "Software, management, and HR sit with us—you get a managed seat, OG Pulse, and visibility into meetings booked.",
     "cta": {
       "label": "Book a Discovery Call"
     }
   },
   "whySouthAfrica": {
     "label": "Why South African SDRs",
-    "title": "Elite Talent. Global Arbitrage.",
-    "subtitle": "South Africa is a strong fit for global outbound teams: native-level English, timezone overlap, and serious cost leverage—without sacrificing quality.",
+    "title": "Cape Town talent that sounds like your market—at a cost that scales.",
+    "subtitle": "Native-level English, timezone overlap with US/UK buyers, and serious cost leverage without cutting the stack or the coaching.",
     "points": [
       {
         "title": "Native-level English",
-        "description": "Clear, professional communication on calls and in writing—what your prospects expect from a serious vendor."
+        "description": "Clear communication on calls and in writing—what prospects expect from a serious vendor."
       },
       {
         "title": "Strong sales culture",
         "description": "A deep bench of reps used to B2B outreach, coaching, and metric-driven work."
       },
       {
-        "title": "Global timezone overlap",
-        "description": "Coverage that lines up with when your buyers are at their desks—without asking your team to work graveyard shifts."
+        "title": "Timezone overlap",
+        "description": "Coverage when your buyers are at their desks—without asking your team to work graveyard shifts."
       },
       {
-        "title": "70% savings vs. many local hires",
-        "description": "Global arbitrage without cutting corners—your seat includes the full software stack (Apollo, LinkedIn Sales Navigator, CRM, dialer) so you are not buying tools twice."
+        "title": "Lower cost than many local hires",
+        "description": "Your seat includes the outbound stack (Apollo, LinkedIn Sales Navigator, CRM, dialer) so you are not buying tools twice."
       },
       {
-        "title": "Motivated, dedicated teams",
+        "title": "Dedicated teams",
         "description": "Reps who treat your pipeline as their job—because it is."
       }
     ]

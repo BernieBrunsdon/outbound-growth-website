@@ -47,46 +47,46 @@ export default function ContactForm() {
     }
   };
 
+  const fieldClass =
+    'w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-primary focus:border-transparent';
+
   return (
-    <section id="contact" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="text-section-label mb-4">Contact</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
-            Ready to Transform Your Sales?
+    <section id="contact" className="section-padding bg-surface">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-2xl mb-12">
+          <div className="text-section-label">Contact</div>
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mb-4 leading-tight">
+            Book a discovery call
           </h2>
-          <p className="text-xl text-muted max-w-3xl mx-auto">
-            Book a consultation or request the pilot pack. We support teams across sectors and regions with flexible
-            engagement options.
+          <p className="text-lg text-muted leading-relaxed">
+            Tell us about your ICP and capacity goals. We will reply with next steps for a pilot conversation.
           </p>
           {siteContent.finalCta?.launch_phase_note ? (
-            <p className="text-sm text-muted mt-4 max-w-2xl mx-auto leading-relaxed">
-              {siteContent.finalCta.launch_phase_note}
-            </p>
+            <p className="text-sm text-muted mt-4 leading-relaxed">{siteContent.finalCta.launch_phase_note}</p>
           ) : null}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="card p-8">
-            <h3 className="text-2xl font-semibold text-ink mb-6">Get in Touch</h3>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-7 border border-slate-200 bg-white p-6 md:p-8">
+            <h3 className="font-display text-xl font-semibold text-ink mb-6">Send a message</h3>
 
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
+                Thanks—your message was sent. We will get back to you soon.
               </div>
             )}
 
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                Sorry, there was an error sending your message. Please try again or contact us directly.
+                Something went wrong. Please try again or email us directly.
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-ink mb-2">
-                    Full Name *
+                    Full name *
                   </label>
                   <input
                     type="text"
@@ -95,7 +95,7 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className={fieldClass}
                     placeholder="Your full name"
                   />
                 </div>
@@ -111,8 +111,8 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="your@email.com"
+                    className={fieldClass}
+                    placeholder="you@company.com"
                   />
                 </div>
               </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className={fieldClass}
                   placeholder="+27 … or your best number"
                 />
               </div>
@@ -144,8 +144,8 @@ export default function ContactForm() {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Your company name"
+                  className={fieldClass}
+                  placeholder="Company name"
                 />
               </div>
 
@@ -160,28 +160,28 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Tell us about your sales challenges and goals..."
+                  className={fieldClass}
+                  placeholder="ICP, markets, and what you want from a pilot…"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 btn-hover disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending...' : 'Book a Discovery Call'}
+                {isSubmitting ? 'Sending…' : 'Book a Discovery Call'}
               </button>
             </form>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-semibold text-ink mb-6">Contact Information</h3>
+          <div className="lg:col-span-5">
+            <h3 className="font-display text-xl font-semibold text-ink mb-6">Direct contact</h3>
 
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -191,8 +191,8 @@ export default function ContactForm() {
                   </svg>
                 </div>
                 <div>
-                  <div className="font-semibold text-ink">Email</div>
-                  <div className="space-y-1">
+                  <div className="font-semibold text-ink mb-2">Email</div>
+                  <div className="space-y-3">
                     <div>
                       <span className="text-sm text-muted">Admin</span>
                       <br />
@@ -214,9 +214,9 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
