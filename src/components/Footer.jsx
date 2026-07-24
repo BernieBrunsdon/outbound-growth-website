@@ -37,13 +37,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-ink text-white">
+    <footer className="bg-navy/30 text-white backdrop-blur-[2px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <div className="relative w-32 h-10 mb-2">
-                <Image src="/images/logo.png" alt="Outbound-Growth Logo" fill className="object-contain" />
+              <div className="relative w-48 h-20 mb-2">
+                <Image src="/images/logo.png" alt="Outbound-Growth Logo" fill className="object-contain object-left" />
               </div>
               <div className="text-sm text-gray-300">
                 <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">

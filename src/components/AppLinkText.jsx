@@ -17,7 +17,7 @@ const LINKED = new Set([
 export default function AppLinkText({
   children,
   className,
-  linkClassName = 'text-primary underline decoration-primary/40 underline-offset-2 hover:text-blue-700 font-medium',
+  linkClassName = 'text-primary underline decoration-primary/40 underline-offset-2 hover:text-primary-dark font-medium',
 }) {
   const url = CLIENT_APP_URL;
   if (children == null || typeof children !== 'string') {

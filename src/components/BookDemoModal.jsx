@@ -69,17 +69,17 @@ export default function BookDemoModal({ isOpen, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="book-demo-modal-title"
-        className="bg-white rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-slate-200"
+        className="bg-surface rounded-xl shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto border border-white/10"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 flex items-center justify-between gap-4 px-6 py-4 border-b border-slate-100 bg-white rounded-t-xl">
+        <div className="sticky top-0 flex items-center justify-between gap-4 px-6 py-4 border-b border-white/10 bg-surface rounded-t-xl">
           <h2 id="book-demo-modal-title" className="font-display text-xl font-semibold text-ink">
             Book a Discovery Call
           </h2>
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-100 transition-colors"
+            className="p-2 rounded-lg text-muted hover:text-ink hover:bg-white/5 transition-colors"
             aria-label="Close"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,12 +90,12 @@ export default function BookDemoModal({ isOpen, onClose }) {
 
         <div className="p-6">
           {submitStatus === 'success' && (
-            <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+            <div className="mb-4 p-4 bg-accent/15 border border-accent/30 rounded-lg text-accent text-sm">
               Thank you! We&apos;ll get back to you soon.
             </div>
           )}
           {submitStatus === 'error' && (
-            <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+            <div className="mb-4 p-4 bg-red-500/10 border border-red-400/30 rounded-lg text-red-300 text-sm">
               Something went wrong. Please try again or email us directly.
             </div>
           )}
@@ -112,7 +112,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="Your full name"
               />
             </div>
@@ -127,7 +127,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="you@company.com"
               />
             </div>
@@ -142,7 +142,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="+27 … or your best number"
               />
             </div>
@@ -157,7 +157,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 required
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="Company name"
               />
             </div>
@@ -172,7 +172,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="What would you like to discuss?"
               />
             </div>
@@ -180,14 +180,14 @@ export default function BookDemoModal({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed btn-hover"
+                className="flex-1 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending…' : 'Book a Discovery Call'}
               </button>
               <button
                 type="button"
                 onClick={onClose}
-                className="flex-1 border-2 border-gray-200 text-ink py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                className="flex-1 border border-white/20 text-ink py-3 rounded-lg font-semibold hover:bg-white/5 transition-colors"
               >
                 Cancel
               </button>

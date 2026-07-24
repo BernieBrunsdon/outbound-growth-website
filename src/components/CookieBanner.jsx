@@ -35,13 +35,13 @@ export default function CookieBanner() {
           <div className="flex space-x-4">
             <button
               onClick={acceptCookies}
-              className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+              className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-200"
             >
               Accept
             </button>
             <button
               onClick={() => setShowBanner(false)}
-              className="border border-gray-300 text-ink px-6 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200"
+              className="border border-white/20 text-ink px-6 py-2 rounded-lg font-semibold hover:bg-white/5 transition-colors duration-200"
             >
               Decline
             </button>

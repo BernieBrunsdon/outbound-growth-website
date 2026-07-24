@@ -48,10 +48,10 @@ export default function ContactForm() {
   };
 
   const fieldClass =
-    'w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-primary focus:border-transparent';
+    'w-full px-4 py-3 border border-white/15 rounded-lg bg-panel text-ink placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent';
 
   return (
-    <section id="contact" className="section-padding bg-surface">
+    <section id="contact" className="section-padding">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mb-12">
           <div className="text-section-label">Contact</div>
@@ -67,17 +67,17 @@ export default function ContactForm() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-7 border border-slate-200 bg-white p-6 md:p-8">
+            <div className="lg:col-span-7 border border-white/10 bg-surface/70 backdrop-blur-sm p-6 md:p-8">
             <h3 className="font-display text-xl font-semibold text-ink mb-6">Send a message</h3>
 
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+              <div className="mb-6 p-4 bg-accent/15 border border-accent/30 rounded-lg text-accent">
                 Thanks—your message was sent. We will get back to you soon.
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+              <div className="mb-6 p-4 bg-red-500/10 border border-red-400/30 rounded-lg text-red-300">
                 Something went wrong. Please try again or email us directly.
               </div>
             )}
@@ -168,7 +168,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending…' : 'Book a Discovery Call'}
               </button>

@@ -19,13 +19,25 @@ description: >-
 - Never use Inter, Roboto, Arial, or system UI as the brand look
 
 ## Color
-- Primary: `#0B63D6`
-- Accent: `#06A77D`
-- Ink: `#0F1724`
-- Muted: `#5B6472`
-- Page bg: `#F7F8FA` (`bg`)
-- Surface: `#FFFFFF`
-- No purple accents. No purple-on-white SaaS gradients. No glow stacks.
+- Navy / page bg: `#0B1220` (`navy`, `bg`)
+- Surface panels: `#151F32` (`surface`)
+- Nested panels: `#1A2640` (`panel`)
+- Text: `#E8EEF7` (`ink`)
+- Muted text: `#94A3B8`
+- Primary CTA: `#488080` (logo teal)
+- Primary hover: `#356666`
+- Accent: `#5AA9A8`
+- Section labels: `#7AB8B8`
+- Header: translucent navy + blur (`bg-navy/80 backdrop-blur`), light link text
+- No white global chrome; no purple accents; no bright blue CTAs
+
+## Video backgrounds
+- Hero zone (`why-sa-loop.mp4`, man from behind): sticky behind Hero + Solution intro
+- Site body (`hero-loop.mp4`): sticky behind chapters, pricing, Why SA, and contact
+- Use `StickyVideoZone` for multi-section spans; `VideoBackdrop` for a single section if needed
+- Header has no bottom border (open into the hero video)
+- Always keep a dark gradient overlay for text contrast
+- Keep files ~2–8 MB; section panels over video should be translucent (`bg-surface/70`), not solid white
 
 ## Layout rules
 - First viewport: brand name at hero scale, one headline, one short supporting line, one CTA group, one dominant full-bleed visual (OG Pulse UI as atmosphere/background is preferred)

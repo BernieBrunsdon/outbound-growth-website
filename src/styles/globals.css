@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0B63D6;
-  --color-accent: #06A77D;
-  --color-ink: #0F1724;
-  --color-muted: #5B6472;
-  --color-bg: #F7F8FA;
-  --color-surface: #FFFFFF;
+  --color-primary: #488080;
+  --color-primary-dark: #356666;
+  --color-accent: #5AA9A8;
+  --color-navy: #0B1220;
+  --color-ink: #E8EEF7;
+  --color-muted: #94A3B8;
+  --color-bg: #0B1220;
+  --color-surface: #151F32;
+  --color-panel: #1A2640;
   --radius: 10px;
   --font-display: 'Sora', system-ui, sans-serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
@@ -51,7 +54,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #eef0f3;
+  background: #0a101a;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,7 +63,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0a52b8;
+  background: var(--color-primary-dark);
 }
 
 :focus:not(:focus-visible) {
@@ -70,7 +73,7 @@ a {
 a:focus-visible,
 button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px rgba(11, 99, 214, 0.45);
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px rgba(72, 128, 128, 0.45);
   border-radius: 6px;
 }
 
@@ -95,7 +98,7 @@ select:focus-visible {
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--color-primary);
+  color: #7ab8b8;
   margin-bottom: 0.75rem;
 }
 
@@ -116,8 +119,9 @@ select:focus-visible {
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
-  border-top: 1px solid #e5e7eb;
+  background: var(--color-surface);
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  color: var(--color-ink);
   padding: 1rem;
   z-index: 50;
   transform: translateY(100%);

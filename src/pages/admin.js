@@ -80,7 +80,7 @@ export default function Admin() {
             </div>
             <button
               type="submit"
-              className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200"
+              className="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors duration-200"
             >
               Login
             </button>
@@ -107,7 +107,7 @@ export default function Admin() {
               <button
                 onClick={exportCSV}
                 disabled={contacts.length === 0}
-                className="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50"
+                className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50"
               >
                 Export CSV
               </button>
@@ -160,7 +160,7 @@ export default function Admin() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         <span className={`px-2 py-1 text-xs rounded-full ${
-                          contact.type === 'consultation' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'
+                          contact.type === 'consultation' ? 'bg-primary/15 text-primary' : 'bg-green-100 text-green-800'
                         }`}>
                           {contact.type}
                         </span>

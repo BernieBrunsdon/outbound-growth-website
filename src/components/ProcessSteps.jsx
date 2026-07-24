@@ -4,7 +4,7 @@ export default function ProcessSteps() {
   const { openModal } = useBookDemoModal();
 
   return (
-    <section id="process" className="py-20 md:py-24 bg-bg">
+    <section id="process" className="py-20 md:py-24">
       <div id="pricing" aria-hidden="true" className="relative -top-24" />
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl">
@@ -17,7 +17,7 @@ export default function ProcessSteps() {
           </p>
         </div>
 
-        <div className="mt-12 grid lg:grid-cols-12 border border-slate-200 bg-surface">
+        <div className="mt-12 grid lg:grid-cols-12 border border-white/10 bg-surface/70 backdrop-blur-sm overflow-hidden">
           <div className="lg:col-span-7 p-8 md:p-12">
             <h3 className="font-display text-xl font-semibold text-ink">Dedicated SDR service</h3>
             <p className="text-muted mt-3 text-lg leading-relaxed max-w-xl">
@@ -49,7 +49,7 @@ export default function ProcessSteps() {
             </ul>
           </div>
 
-          <div className="lg:col-span-5 p-8 md:p-12 bg-slate-50 border-t lg:border-t-0 lg:border-l border-slate-200">
+          <div className="lg:col-span-5 p-8 md:p-12 bg-panel/80 border-t lg:border-t-0 lg:border-l border-white/10">
             <p className="text-sm font-semibold text-muted mb-4">Monthly retainer</p>
             <div className="font-display text-4xl md:text-5xl font-semibold text-ink tracking-tight">
               $3,490 / £2,790
@@ -63,14 +63,14 @@ export default function ProcessSteps() {
             <button
               type="button"
               onClick={() => openModal()}
-              className="w-full mt-8 bg-primary text-white font-semibold rounded-lg py-3.5 hover:bg-blue-700 transition-colors"
+              className="w-full mt-8 bg-primary text-white font-semibold rounded-lg py-3.5 hover:bg-primary-dark transition-colors"
             >
               Book a Discovery Call
             </button>
 
-            <div className="mt-8 pt-8 border-t border-slate-200">
+            <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-xs uppercase tracking-wide text-muted font-semibold mb-3">Replaces</p>
-              <div className="space-y-2 text-sm text-ink">
+              <div className="space-y-2 text-sm text-slate-200">
                 <div>Hiring and managing internal SDR talent</div>
                 <div>Separate outbound software subscriptions</div>
                 <div>Campaign strategy, QA, and reporting overhead</div>

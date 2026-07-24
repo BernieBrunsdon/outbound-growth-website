@@ -1,10 +1,14 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
 import siteContent from '../../content/site.json';
 
 export default function Layout({ children }) {
   const { title, description } = siteContent.site;
+  const router = useRouter();
+  const isHome = router.pathname === '/';
+
   return (
     <>
       <Head>
@@ -25,10 +29,11 @@ export default function Layout({ children }) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Head>
-      <div className="min-h-screen flex flex-col bg-bg">
+      <div className={`min-h-screen flex flex-col ${isHome ? 'bg-transparent' : 'bg-bg'}`}>
         <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <main className="flex-grow relative z-10">{children}</main>
+        {/* Home embeds Footer inside the site-wide video zone */}
+        {!isHome ? <Footer /> : null}
       </div>
     </>
   );

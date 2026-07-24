@@ -8,12 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0B63D6',
-        accent: '#06A77D',
-        ink: '#0F1724',
-        muted: '#5B6472',
-        bg: '#F7F8FA',
-        surface: '#FFFFFF',
+        primary: {
+          DEFAULT: '#488080',
+          dark: '#356666',
+        },
+        accent: '#5AA9A8',
+        // Deep navy atmosphere (matches hero video)
+        navy: '#0B1220',
+        ink: '#E8EEF7',
+        muted: '#94A3B8',
+        bg: '#0B1220',
+        surface: '#151F32',
+        panel: '#1A2640',
       },
       borderRadius: {
         custom: '10px',
