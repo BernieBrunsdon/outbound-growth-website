@@ -74,7 +74,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
       >
         <div className="sticky top-0 flex items-center justify-between gap-4 px-6 py-4 border-b border-white/10 bg-surface rounded-t-xl">
           <h2 id="book-demo-modal-title" className="font-display text-xl font-semibold text-ink">
-            Book a Discovery Call
+            Get a Quote
           </h2>
           <button
             type="button"
@@ -182,7 +182,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
                 disabled={isSubmitting}
                 className="flex-1 bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending…' : 'Book a Discovery Call'}
+                {isSubmitting ? 'Sending…' : 'Submit quote request'}
               </button>
               <button
                 type="button"

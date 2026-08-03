@@ -9,26 +9,26 @@ import StickyVideoZone from '../components/StickyVideoZone';
 export default function Home() {
   return (
     <>
-      {/* Man-from-behind video: hero through first section */}
-      <StickyVideoZone
-        src="/videos/why-sa-loop.mp4"
-        poster="/images/og-pulse-dashboard-preview.png"
-        opacity={0.4}
-        overlayClassName="bg-gradient-to-r from-navy via-navy/90 to-navy/60"
-      >
-        <Hero />
-        <SolutionIntro />
-      </StickyVideoZone>
-
-      {/* Former hero video: fixed cover for the entire rest of the site */}
+      {/* Body video always underneath — hero fades into it instead of a hard cut */}
       <StickyVideoZone
         src="/videos/hero-loop.mp4"
-        poster="/images/og-pulse-dashboard-preview.png"
-        opacity={0.45}
-        layered
+        opacity={0.4}
         cover="fixed"
-        overlayClassName="bg-gradient-to-b from-navy/65 via-navy/50 to-navy/65"
+        alwaysOn
+        overlayClassName="bg-gradient-to-b from-navy/70 via-navy/55 to-navy/70"
       >
+        {/* Hero video on top, masked soft at the bottom */}
+        <StickyVideoZone
+          src="/videos/why-sa-loop.mp4"
+          opacity={0.35}
+          priority
+          fadeOutBottom
+          overlayClassName="bg-gradient-to-r from-navy/95 via-navy/88 to-navy/70"
+        >
+          <Hero />
+        </StickyVideoZone>
+
+        <SolutionIntro />
         <SolutionChapters />
         <ProcessSteps />
         <WhySouthAfrica />

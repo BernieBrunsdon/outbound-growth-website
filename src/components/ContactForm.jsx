@@ -72,7 +72,7 @@ export default function ContactForm() {
 
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-accent/15 border border-accent/30 rounded-lg text-accent">
-                Thanks—your message was sent. We will get back to you soon.
+                Thanks. Your message was sent. We will get back to you soon.
               </div>
             )}
 

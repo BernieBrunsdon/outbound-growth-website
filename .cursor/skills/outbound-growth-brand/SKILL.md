@@ -23,7 +23,7 @@ description: >-
 - Surface panels: `#151F32` (`surface`)
 - Nested panels: `#1A2640` (`panel`)
 - Text: `#E8EEF7` (`ink`)
-- Muted text: `#94A3B8`
+- Muted text: `#C5D0DC`
 - Primary CTA: `#488080` (logo teal)
 - Primary hover: `#356666`
 - Accent: `#5AA9A8`

@@ -12,7 +12,7 @@ export default function WhySouthAfrica() {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mb-4 leading-tight">
               {c.title}
             </h2>
-            <p className="text-lg text-slate-300 leading-relaxed">{c.subtitle}</p>
+            <p className="text-lg text-slate-200 leading-relaxed">{c.subtitle}</p>
           </div>
 
           <div className="lg:col-span-7">
@@ -24,7 +24,7 @@ export default function WhySouthAfrica() {
                   </span>
                   <div>
                     <h3 className="font-display text-lg font-semibold text-ink mb-1.5">{p.title}</h3>
-                    <p className="text-slate-300 leading-relaxed">{p.description}</p>
+                    <p className="text-slate-200 leading-relaxed">{p.description}</p>
                   </div>
                 </li>
               ))}

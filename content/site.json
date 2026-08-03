@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Outbound-Growth — Dedicated South African SDRs with OG Pulse",
+    "title": "Outbound-Growth: Dedicated South African SDRs with OG Pulse",
     "description": "Dedicated South African SDR teams for growth companies. Full outbound stack included, with live visibility in OG Pulse.",
     "company": "Outbound-Growth",
     "email": "admin@outbound-growth.com",
@@ -10,7 +10,7 @@
   "appUrl": "https://app.outbound-growth.com",
   "hero": {
     "headline": "South African SDRs. Live pipeline visibility. Flat monthly cost.",
-    "subheadline": "Dedicated reps for your ICP, full outbound stack included, and OG Pulse so you can see every call, email, and meeting—not a monthly PDF.",
+    "subheadline": "Dedicated reps for your ICP, full outbound stack included, and OG Pulse so you can see every call, email, and meeting. Not a monthly PDF.",
     "bullets": [
       "Dedicated human SDRs",
       "OG Pulse real-time dashboard",
@@ -27,11 +27,11 @@
   "solution": {
     "label": "How we work",
     "title": "Managed outbound you can actually inspect.",
-    "subtitle": "Dedicated SDRs, the stack, the cadence, and OG Pulse—so pipeline creation is visible every day, not after the invoice.",
+    "subtitle": "Dedicated SDRs, the stack, the cadence, and OG Pulse, so pipeline creation is visible every day, not after the invoice.",
     "points": [
       {
         "title": "Dedicated SDRs",
-        "description": "Human experts embedded in your motion—your tone, your ICP, your calendar—not a shared pool with divided attention."
+        "description": "Human experts embedded in your motion: your tone, your ICP, your calendar. Not a shared pool with divided attention."
       },
       {
         "title": "Full stack included",
@@ -43,7 +43,7 @@
       },
       {
         "title": "Campaign management",
-        "description": "Daily execution, follow-up discipline, and iteration on what converts—not one-off blasts."
+        "description": "Daily execution, follow-up discipline, and iteration on what converts. Not one-off blasts."
       },
       {
         "title": "OG Pulse",
@@ -54,7 +54,7 @@
   "process": {
     "label": "How it works",
     "title": "From ICP to meetings on your calendar",
-    "subtitle": "Clear stages from targeting to booked meetings—so you always know what happens next.",
+    "subtitle": "Clear stages from targeting to booked meetings, so you always know what happens next.",
     "steps": [
       {
         "title": "Define your ideal customer profile",
@@ -62,7 +62,7 @@
       },
       {
         "title": "Build a target account list",
-        "description": "Research and list building so your team works the right companies—not the easiest CSV download."
+        "description": "Research and list building so your team works the right companies, not the easiest CSV download."
       },
       {
         "title": "Launch multi-channel outreach",
@@ -81,7 +81,7 @@
   "services": {
     "label": "What we run",
     "title": "Outbound execution your SDR owns",
-    "subtitle": "Research, outreach, qualification, and handoff—before the demo, inside your stack where you want it.",
+    "subtitle": "Research, outreach, qualification, and handoff before the demo, inside your stack where you want it.",
     "activities": [
       "Lead and account research",
       "List building",
@@ -92,19 +92,19 @@
       "Meeting booking into your calendar",
       "The OG Pulse Transparency Dashboard"
     ],
-    "closingLine": "Software, management, and HR sit with us—you get a managed seat, OG Pulse, and visibility into meetings booked.",
+    "closingLine": "Software, management, and HR sit with us. You get a managed seat, OG Pulse, and visibility into meetings booked.",
     "cta": {
       "label": "Book a Discovery Call"
     }
   },
   "whySouthAfrica": {
     "label": "Why South African SDRs",
-    "title": "Cape Town talent that sounds like your market—at a cost that scales.",
+    "title": "Talent that sounds like your market, at a cost that scales.",
     "subtitle": "Native-level English, timezone overlap with US/UK buyers, and serious cost leverage without cutting the stack or the coaching.",
     "points": [
       {
         "title": "Native-level English",
-        "description": "Clear communication on calls and in writing—what prospects expect from a serious vendor."
+        "description": "Clear communication on calls and in writing: what prospects expect from a serious vendor."
       },
       {
         "title": "Strong sales culture",
@@ -112,7 +112,7 @@
       },
       {
         "title": "Timezone overlap",
-        "description": "Coverage when your buyers are at their desks—without asking your team to work graveyard shifts."
+        "description": "Coverage when your buyers are at their desks, without asking your team to work graveyard shifts."
       },
       {
         "title": "Lower cost than many local hires",
@@ -120,7 +120,7 @@
       },
       {
         "title": "Dedicated teams",
-        "description": "Reps who treat your pipeline as their job—because it is."
+        "description": "Reps who treat your pipeline as their job, because it is."
       }
     ]
   },

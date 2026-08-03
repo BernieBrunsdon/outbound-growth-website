@@ -16,7 +16,7 @@ module.exports = {
         // Deep navy atmosphere (matches hero video)
         navy: '#0B1220',
         ink: '#E8EEF7',
-        muted: '#94A3B8',
+        muted: '#C5D0DC',
         bg: '#0B1220',
         surface: '#151F32',
         panel: '#1A2640',

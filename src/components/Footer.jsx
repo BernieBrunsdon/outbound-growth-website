@@ -7,7 +7,7 @@ import { CLIENT_APP_URL } from '../lib/appUrl';
 export default function Footer() {
   const quickLinks = [
     { name: 'How we work', href: '#solution' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Get a quote', href: '#pricing' },
     { name: 'Why South Africa', href: '#why-sa' },
     { name: 'Contact', href: '#contact' },
     {
@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               <AppLinkText linkClassName="text-white underline decoration-white/40 underline-offset-2 hover:text-gray-100 font-medium">
-                Dedicated South African SDR seats with OG Pulse—research, outreach, qualification, and meetings on your
+                Dedicated South African SDR seats with OG Pulse: research, outreach, qualification, and meetings on your
                 calendar.
               </AppLinkText>
             </p>
@@ -130,12 +130,6 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-gray-300 text-sm">© 2025 Outbound-Growth. All rights reserved.</div>
-            <div className="text-gray-300 text-sm text-center md:text-right max-w-md">
-              <p className="mb-2">
-                <strong>Legal:</strong> SDRs operate as independent contractors. Consult your advisors on classification
-                and compliance in your jurisdiction.
-              </p>
-            </div>
           </div>
         </div>
       </div>
