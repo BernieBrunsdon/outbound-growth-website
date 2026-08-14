@@ -1,8 +1,6 @@
 import siteContent from '../../content/site.json';
-import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function Hero() {
-  const { openModal } = useBookDemoModal();
   const hero = siteContent.hero;
 
   return (
@@ -19,13 +17,12 @@ export default function Hero() {
             {hero.subheadline}
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-hero-fade">
-            <button
-              type="button"
-              onClick={() => openModal()}
+            <a
+              href="#book"
               className="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold text-base text-center hover:bg-primary-dark transition-colors duration-200"
             >
               {hero.primary_cta.label}
-            </button>
+            </a>
             <a
               href={hero.secondary_cta.href}
               className="bg-white/10 text-white border border-white/30 px-7 py-3.5 rounded-lg font-semibold text-base text-center hover:bg-white/15 transition-colors duration-200 backdrop-blur-sm"

@@ -56,10 +56,14 @@ export default function ContactForm() {
         <div className="max-w-2xl mb-12">
           <div className="text-section-label">Contact</div>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mb-4 leading-tight">
-            Book a discovery call
+            Get in touch
           </h2>
           <p className="text-lg text-muted leading-relaxed">
-            Tell us about your ICP and capacity goals. We will reply with next steps for a pilot conversation.
+            Tell us about your ICP and capacity goals. We will reply with next steps, or you can{' '}
+            <a href="#book" className="text-primary hover:underline">
+              book a call directly
+            </a>
+            .
           </p>
           {siteContent.finalCta?.launch_phase_note ? (
             <p className="text-sm text-muted mt-4 leading-relaxed">{siteContent.finalCta.launch_phase_note}</p>
@@ -170,7 +174,7 @@ export default function ContactForm() {
                 disabled={isSubmitting}
                 className="w-full bg-primary text-white py-3.5 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending…' : 'Book a Discovery Call'}
+                {isSubmitting ? 'Sending…' : 'Send message'}
               </button>
             </form>
           </div>

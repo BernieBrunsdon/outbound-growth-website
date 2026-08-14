@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import { SolutionIntro, SolutionChapters } from '../components/SolutionSection';
 import ProcessSteps from '../components/ProcessSteps';
 import WhySouthAfrica from '../components/WhySouthAfrica';
+import BookCall from '../components/BookCall';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import StickyVideoZone from '../components/StickyVideoZone';
@@ -32,6 +33,7 @@ export default function Home() {
         <SolutionChapters />
         <ProcessSteps />
         <WhySouthAfrica />
+        <BookCall />
         <ContactForm />
         <Footer />
       </StickyVideoZone>

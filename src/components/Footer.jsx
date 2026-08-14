@@ -9,6 +9,7 @@ export default function Footer() {
     { name: 'How we work', href: '#solution' },
     { name: 'Get a quote', href: '#pricing' },
     { name: 'Why South Africa', href: '#why-sa' },
+    { name: 'Book a call', href: '#book' },
     { name: 'Contact', href: '#contact' },
     {
       name: 'Client Login',

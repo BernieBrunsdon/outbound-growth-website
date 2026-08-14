@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CLIENT_APP_URL } from '../lib/appUrl';
-import { useBookDemoModal } from '../context/BookDemoModalContext';
 
 export default function Header() {
-  const { openModal } = useBookDemoModal();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'Solution', href: '#solution' },
     { name: 'Quote', href: '#pricing' },
     { name: 'Why SA', href: '#why-sa' },
+    { name: 'Book a call', href: '#book' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -56,13 +55,12 @@ export default function Header() {
             >
               Client Login
             </a>
-            <button
-              type="button"
-              onClick={() => openModal()}
+            <Link
+              href="#book"
               className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary-dark transition-colors duration-200 whitespace-nowrap focus-visible:outline-none"
             >
               Book a Discovery Call
-            </button>
+            </Link>
           </div>
 
           <button
@@ -103,16 +101,13 @@ export default function Header() {
                 Client Login
               </a>
               <div className="pt-4 border-t border-white/10">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    openModal();
-                  }}
+                <Link
+                  href="#book"
+                  onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-primary text-white px-8 py-3.5 rounded-lg font-semibold text-sm text-center hover:bg-primary-dark transition-colors duration-200 focus-visible:outline-none"
                 >
                   Book a Discovery Call
-                </button>
+                </Link>
               </div>
             </div>
           </div>
