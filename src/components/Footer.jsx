@@ -100,6 +100,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <h3 className="font-semibold text-lg mt-8 mb-4">Services</h3>
+            <ul className="space-y-2">
+              {[
+                { name: 'SDR Outsourcing', href: '/sdr-outsourcing' },
+                { name: 'SDR as a Service', href: '/sdr-as-a-service' },
+                { name: 'Sales Outsourcing', href: '/sales-outsourcing' },
+                { name: 'Lead Generation', href: '/lead-generation' },
+                { name: 'Cold Calling', href: '/cold-calling' },
+                { name: 'South African SDRs', href: '/south-african-sdrs' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors duration-200">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

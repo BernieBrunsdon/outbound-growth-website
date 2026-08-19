@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <BookDemoModalProvider>
-      <Layout>
+      <Layout seo={Component.seo}>
         <Component {...pageProps} />
         <CookieBanner />
       </Layout>
