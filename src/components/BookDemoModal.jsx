@@ -44,6 +44,7 @@ export default function BookDemoModal({ isOpen, onClose }) {
         phone: formData.phone,
         company: formData.company,
         message: formData.message,
+        source: 'Demo request',
       });
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });

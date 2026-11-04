@@ -6,6 +6,23 @@ export default function CalendlyEmbed({ url, className = '' }) {
   const containerRef = useRef(null);
   const [status, setStatus] = useState('loading');
 
+  // Slack alert when someone books through this embed (works on Calendly's free plan)
+  useEffect(() => {
+    const onMessage = (e) => {
+      if (e.origin !== 'https://calendly.com' || !e.data || e.data.event !== 'calendly.event_scheduled') return;
+      const inviteeUri = e.data.payload && e.data.payload.invitee && e.data.payload.invitee.uri;
+      if (!inviteeUri) return;
+      fetch('/api/leads/calendly', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ inviteeUri }),
+        keepalive: true,
+      }).catch(() => {});
+    };
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+
   useEffect(() => {
     let cancelled = false;
 
