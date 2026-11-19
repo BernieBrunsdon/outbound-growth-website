@@ -27,6 +27,7 @@ export default function Header() {
               alt="Outbound-Growth Logo"
               width={200}
               height={44}
+              className="logo-header"
               style={{ height: 44, width: 'auto', maxWidth: 200, display: 'block', objectFit: 'contain' }}
               onError={(e) => {
                 e.target.src = '/images/logo.png';

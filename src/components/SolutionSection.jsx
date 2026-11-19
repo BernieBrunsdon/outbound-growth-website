@@ -4,89 +4,91 @@ import { SolutionIntro } from './SolutionIntro';
 
 export { SolutionIntro };
 
-const CHAPTER_IMAGES = [
-  '/images/og-pulse-multidevice-preview.png',
-  '/images/og-pulse-solution-showcase.png',
-  '/images/og-pulse-dashboard-preview.png',
-  '/images/og-pulse-multidevice-preview.png',
-  '/images/og-pulse-app-real.png',
-];
-
 export function SolutionChapters() {
   const { openModal } = useBookDemoModal();
 
   const chapters = [
     {
-      title: 'Dedicated SDR team',
-      subhead: 'Embedded in your motion, not a shared pool.',
-      body:
-        'Each seat is staffed with vetted, South Africa-based talent: native English, trained on your ICP, tone, and calendar. Continuous coaching and QA sit with us so you are not hiring, ramping, or managing headcount.',
+      title: 'Dedicated SDR teams',
+      subhead: 'People who own your pipeline.',
+      body: 'Dedicated South African SDR professionals embedded into your sales operation. From prospect research to qualification and meeting generation, your team operates as an extension of your business.',
       bullets: [
-        'Coaching and QA on live work',
-        'No hiring or ramp burden on your side',
-        'Strategy support included with the seat',
+        'Dedicated SDR capacity',
+        'Native-level English communication',
+        'Continuous coaching and quality assurance',
       ],
       reverse: false,
       ctaLabel: 'Talk through SDR fit',
       ctaType: 'modal',
-      imageAlt: 'OG Pulse on multiple devices',
+      image: '/images/ecosystem/obg-pulse.png',
+      imageAlt: 'OBG Pulse CRM and sales operations',
+      width: 641,
+      height: 1024,
     },
     {
-      title: 'Stack included',
-      subhead: 'No setup fees. No separate software chase.',
-      body:
-        'Your team plugs into our outbound engine for data, sequencing, and CRM sync, without a five-figure tool bill or a two-week config project. We carry subscription and ops cost; you get meetings.',
+      title: 'An integrated technology stack',
+      subhead: 'Your entire outbound operation. One ecosystem.',
+      body: 'Forget managing disconnected sales tools. We bring prospect intelligence, CRM, outreach infrastructure and campaign management together into one coordinated operation.',
       bullets: [
-        'Target list intelligence',
-        'HubSpot / Salesforce integrations',
-        'Multi-channel sequences managed for you',
+        'Integrated sales technology',
+        'Centralised campaign management',
+        'CRM and prospect visibility',
       ],
       reverse: true,
       ctaLabel: null,
-      imageAlt: 'Outbound stack and workflow showcase',
+      image: '/images/ecosystem/obg-central.png',
+      imageAlt: 'OBG Central connecting Pulse and Reach',
+      width: 1024,
+      height: 515,
     },
     {
-      title: 'Targeting that converts',
-      subhead: 'ICP and lists built for buyers who close.',
-      body:
-        'We define firmographics, roles, and triggers, then build and refresh account lists. Messaging is tested against titles and segments that actually convert in your category, not volume for its own sake.',
+      title: 'Intelligent prospecting',
+      subhead: 'Precision before outreach.',
+      body: 'We identify the companies, decision-makers and buying signals that matter to your business. Every campaign starts with a defined ideal customer profile and research-led targeting.',
       bullets: [
-        'ICP aligned to market fit',
-        'Persona-based message tests',
-        'Feedback loops into the next list',
+        'ICP development',
+        'Decision-maker identification',
+        'Account and contact intelligence',
       ],
       reverse: false,
       ctaLabel: null,
-      imageAlt: 'OG Pulse dashboard targeting view',
+      image: '/images/ecosystem/obg-reach-ui.png',
+      imageAlt: 'OBG Reach prospect research and campaign interface',
+      width: 642,
+      height: 430,
     },
     {
-      title: 'Daily omnichannel execution',
-      subhead: 'Call, email, and LinkedIn, with follow-through.',
-      body:
-        'Cadences run across channels with disciplined follow-up. We test subject lines, value props, and scripts, then keep pressure on engagement. Not one-off blasts.',
+      title: 'Omnichannel execution',
+      subhead: 'Every interaction has a purpose.',
+      body: 'Our SDRs coordinate personalised cold email, calling and LinkedIn outreach through structured campaigns designed to generate qualified conversations.',
       bullets: [
-        'A/B testing on live campaigns',
-        'Multi-touch nurture sequences',
-        'Objection handling and follow-up cadence',
+        'Personalised email campaigns',
+        'Strategic cold calling',
+        'LinkedIn engagement and follow-up',
       ],
       reverse: true,
       ctaLabel: null,
-      imageAlt: 'Campaign activity across devices',
+      image: '/images/ecosystem/obg-reach.png',
+      imageAlt: 'OBG Reach campaigns, sequences and inbox',
+      width: 642,
+      height: 1024,
     },
     {
-      title: 'OG Pulse',
-      subhead: 'The same ops dashboard our SDRs use.',
-      body:
-        'Skip the black-box PDF. Log into Pulse for call recordings, email logs, and the Meeting Vault, 24/7. Check intent notes and show-up history whenever you want proof the work is happening.',
+      title: 'Complete operational visibility',
+      subhead: 'See the work. Track the results.',
+      body: 'Our clients have access to OG Pulse, giving them visibility into outbound activity, prospect engagement, meeting progress and campaign performance.',
       bullets: [
-        'Live call and message logs',
-        'Meeting Vault with context',
-        'Show-up visibility over time',
+        'Live activity and reporting',
+        'Call and communication records',
+        'Meeting and pipeline visibility',
       ],
       reverse: false,
       ctaLabel: null,
       ctaType: null,
-      imageAlt: 'OG Pulse application screenshot',
+      image: '/images/ecosystem/obg-pulse-ui.png',
+      imageAlt: 'OG Pulse sales pipeline and performance interface',
+      width: 641,
+      height: 430,
     },
   ];
 
@@ -102,7 +104,7 @@ export function SolutionChapters() {
               <p className="text-sm font-semibold text-muted mb-3 tabular-nums">
                 {String(index + 1).padStart(2, '0')}
               </p>
-              <h3 className="font-display text-2xl md:text-4xl font-semibold text-ink leading-tight mb-3">
+              <h3 className="font-display text-2xl md:text-[2rem] font-semibold text-ink leading-tight mb-3">
                 {chapter.title}
               </h3>
               <p className="text-lg font-medium text-primary mb-4">{chapter.subhead}</p>
@@ -127,14 +129,17 @@ export function SolutionChapters() {
               ) : null}
             </div>
 
-            <div className={`md:col-span-6 ${chapter.reverse ? 'md:order-1' : ''}`}>
-              <div className="relative overflow-hidden border border-white/10 bg-panel/80 backdrop-blur-sm">
+            <div className={`md:col-span-6 flex justify-center ${chapter.reverse ? 'md:order-1' : ''}`}>
+              <div className="product-shot">
                 <Image
-                  src={CHAPTER_IMAGES[index]}
+                  src={chapter.image}
                   alt={chapter.imageAlt}
-                  width={1280}
-                  height={800}
-                  className="w-full h-auto object-cover"
+                  width={chapter.width}
+                  height={chapter.height}
+                  quality={95}
+                  unoptimized
+                  className="product-shot-image"
+                  sizes="520px"
                 />
               </div>
             </div>

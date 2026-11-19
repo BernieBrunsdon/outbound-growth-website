@@ -131,3 +131,52 @@ select:focus-visible {
 .cookie-banner.show {
   transform: translateY(0);
 }
+
+.logo-header {
+  filter: drop-shadow(0 0 0.45px #05080d) drop-shadow(0.55px 0 0 #05080d)
+    drop-shadow(-0.55px 0 0 #05080d) drop-shadow(0 0.55px 0 #05080d)
+    drop-shadow(0 -0.55px 0 #05080d);
+}
+
+.product-shot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: min(100%, 520px);
+  margin-inline: auto;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(26, 38, 64, 0.7);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+  transition: box-shadow 400ms ease;
+}
+
+.product-shot img,
+.product-shot-image {
+  position: static !important;
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: min(500px, calc(100vw - 3.5rem));
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 18px;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 400ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-shot:hover {
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.36);
+  }
+
+  .product-shot:hover img,
+  .product-shot:hover .product-shot-image {
+    transform: scale(1.03);
+  }
+}

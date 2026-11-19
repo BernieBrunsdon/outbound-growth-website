@@ -13,8 +13,14 @@ export default function Hero() {
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-semibold leading-[1.08] text-white max-w-2xl">
             {hero.headline}
           </h1>
-          <p className="mt-5 text-lg md:text-xl text-slate-200 leading-relaxed max-w-xl animate-hero-fade">
+          <p className="mt-5 text-lg md:text-xl font-semibold text-white leading-snug max-w-2xl animate-hero-fade">
             {hero.subheadline}
+          </p>
+          <p className="mt-4 text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl animate-hero-fade">
+            {hero.body}
+          </p>
+          <p className="mt-4 text-lg md:text-xl font-semibold text-white leading-snug max-w-2xl animate-hero-fade">
+            {hero.closing}
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-hero-fade">
             <a
