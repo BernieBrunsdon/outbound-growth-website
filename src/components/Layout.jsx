@@ -21,10 +21,10 @@ export default function Layout({ children, seo }) {
         <meta name="description" content={pageDesc} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={canonical} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico?v=circle" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=circle" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png?v=circle" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=circle" />
         <meta property="og:title" content={seo?.ogTitle || pageTitle} />
         <meta property="og:description" content={seo?.ogDescription || pageDesc} />
         <meta property="og:type" content="website" />
